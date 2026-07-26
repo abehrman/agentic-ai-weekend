@@ -1,0 +1,9 @@
+.DS_Store
+node_modules/
+test-results/
+playwright-report/
+*.log
+.design/
+PROJECT_BRIEF.md
+AGENTS.md
+.playwright-mcp/
