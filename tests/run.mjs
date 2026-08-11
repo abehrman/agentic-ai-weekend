@@ -9,6 +9,7 @@ const steps = [
   ['node', [join(here, 'validate.mjs')]],
   ['node', [join(here, 'clearance.mjs')]],
   ['node', [join(here, 'contrast.mjs')]],
+  ['node', [join(here, 'tuition-window.mjs')]],
   ['node', ['--test', join(here, 'window.test.mjs')]],
 ];
 

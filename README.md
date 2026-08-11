@@ -65,14 +65,29 @@ The HTML is the whole story. `script.js` never gates comprehension — it only a
 The automated suite is pure Node, no dependencies to install:
 
 ```bash
-node tests/run.mjs          # runs all four groups below
+node tests/run.mjs          # runs all five groups below
 # or individually:
 node tests/validate.mjs     # locked facts, forbidden inflations, structure, palette, glyphs, files
 node tests/clearance.mjs    # the five-station path + no-autoplay state-machine contract
 node tests/contrast.mjs     # WCAG contrast for every locked dark-token pairing
+node tests/tuition-window.mjs       # rail, offers, logic, and reply templates name the same windows
 node --test tests/window.test.mjs   # windowFor() boundary flips, no system clock
 ```
 
 `tests/validate.mjs` checks that every locked fact from the brief is present and exact, that the selected hero copy and Clearance Bench vocabulary are present, that both 90-minute lunches and the 3/8/8 on-site hours are printed, that the dark palette is actually wired into CSS (and the old ivory/forest tokens are gone), that inline SVG fixtures are decorative (`aria-hidden`, no essential SVG text), that forbidden inflations, payment-implication wording, and trackers are absent, that there is a single `<h1>`, that no section-symbol or arrow glyphs appear, that local assets use relative paths while canonical/OG/structured-data URLs are absolute, and that all required files exist. `tests/clearance.mjs` fixes the interaction contract: five stations in DOM order with real explanations, the advance/reset/numbered controls, a polite live region, and a `script.js` with no `setInterval`/`setTimeout` autoplay and no state change on `visibilitychange`. `tests/contrast.mjs` computes WCAG contrast for each locked pairing. `tests/window.test.mjs` verifies the tuition boundary flips at the right dates (Aug 15/16 and Sep 5/6) without touching the system clock.
+
+`tests/tuition-window.mjs` is the drift check across everything that names a tuition window: the printed rail, the JSON-LD offers, the `windowFor()` logic (whose two boundaries it *derives* by walking the year rather than restating them), and the reply templates in `docs/`. It also fixes the no-JavaScript contract — the shipped HTML must carry no `is-current` class and every "Current payment window" marker must ship `hidden`, so a stale window can never be baked into the file. Pass a date to rehearse a boundary; with no argument it uses today in America/New_York:
+
+```bash
+node tests/tuition-window.mjs 2026-08-16   # prints the exact state to expect on the day
+```
+
+Looking at the live page on a boundary morning stays a human step; the command prints what to compare against.
+
+`PROJECT_BRIEF.md` is gitignored working notes. When it is on disk the validator reads the canonical enrollment mailto from it and cross-checks the page against it; on a clean checkout it falls back to the page's own first mailto anchor. Either way the check that matters — every shipped `mailto:` anchor being byte-identical to that one canonical URL — runs.
+
+## Enrollment path
+
+`docs/seat-request-replies.md` is the receiving end of the CTAs: what the pre-addressed email contains, who triages it and how fast, the reply templates for each stage (first reply, closing window, seat confirmed, follow-up, cohort full, wrong fit), reply-ready FAQ answers, and an explicit list of what is **not yet decided** — payment method above all, which blocks the first reply from being sent as written. Prices and date ranges in that file are checked against the page by `tests/tuition-window.mjs`, so a template can never quote tuition the site does not print.
 
 Browser QA was performed with Playwright (Chromium) against a local server: console cleanliness; no horizontal overflow at 375 / 414 / 1440 px; every visible button, summary, wordmark, and standalone email link measured at 44px minimum; the full clearance flow (advance labels 1–4, the flip to *Review and release* at station 5, then a release that **moves the carrier across the stop bar into the output tray** — a position distinct from the pre-gate station-5 stop) and direct keyboard station control, including **post-release direct selection clearing the released state**; a comparison proving the **desktop carrier travels the x-axis and the mobile carrier the y-axis**, with both releases distinct; the tuition current-window marker in Eastern Time; the **absence of any fixed or sticky enrollment bar** (zero visible fixed elements, and no fixed element intersecting rendered text, across the briefing, clearance, weekend, tuition, and FAQ scenes at 375 / 414 / 720 / 768 / 900 / 1024 / 1440 px); the FAQ (six answers open on desktop, one on mobile, all six open with no JavaScript, summaries mouse- and keyboard-operable at every width); the reduced-motion path (carrier and gate reflect state instantly with transitions disabled); the no-JavaScript path (complete semantic DOM, controls and marker hidden); `forced-colors: active`; and the chalk-outer / orange-inner keyboard focus ring. Re-run it by serving the folder (`python3 -m http.server 8777`) and driving `http://127.0.0.1:8777/` in any browser.
