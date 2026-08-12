@@ -7,3 +7,5 @@ playwright-report/
 PROJECT_BRIEF.md
 AGENTS.md
 .playwright-mcp/
+.claude/worktrees/
+.claude/settings.local.json
