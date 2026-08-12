@@ -158,29 +158,9 @@ if (offers.length === 3) {
     addDays(offers[1].priceValidUntil, 1) === offers[2].validFrom);
 }
 
-/* --- 5. The reply templates quote the same windows ---------------------- */
-// "Check that any reply template you are sending quotes the window that is
-// actually live" only works if the templates and the page agree on what the
-// windows ARE. A price that drifts here is a price quoted to a real person.
-const docPath = 'docs/seat-request-replies.md';
-if (existsSync(join(root, docPath))) {
-  const doc = read(docPath);
-  for (const w of rail) {
-    must('reply templates quote the "' + w.key + '" price ' + w.price, doc.includes(w.price));
-    must('reply templates quote the "' + w.key + '" dates: ' + JSON.stringify(w.dates),
-      doc.includes(w.dates));
-  }
-  const known = new Set(rail.map((w) => w.price));
-  const stray = [...new Set(doc.match(/\$[\d,]{3,}/g) || [])].filter((p) => !known.has(p));
-  must('reply templates quote no tuition price the page does not print' +
-    (stray.length ? ' (found ' + stray.join(', ') + ')' : ''), stray.length === 0);
-} else {
-  ok(docPath + ' absent — skipping reply-template price check');
-}
-
-/* --- 6. What to expect on the day --------------------------------------- */
-// The live look is a human step. This prints exactly what to look for so the
-// check on the day is a comparison, not a judgement call.
+/* --- 5. Which day are we checking? -------------------------------------- */
+// Resolved before the doc checks because one of them — whether send-ready push
+// copy has outlived its window — depends on the date.
 const arg = process.argv[2];
 if (arg && !/^\d{4}-\d{2}-\d{2}$/.test(arg)) {
   fail('date argument must be YYYY-MM-DD (got ' + JSON.stringify(arg) + ')');
@@ -191,6 +171,74 @@ const today = new Intl.DateTimeFormat('en-CA', {
 const asOf = /^\d{4}-\d{2}-\d{2}$/.test(arg || '') ? arg : today;
 const live = windowFor(asOf);
 const liveRow = rail.find((w) => w.key === live);
+
+/* --- 6. The working docs quote the same windows ------------------------- */
+// "Check that any copy you are sending quotes the window that is actually live"
+// only works if the docs and the page agree on what the windows ARE. A price
+// that drifts here is a price quoted to a real person.
+//
+// The legitimate amounts are whatever the PAGE prints — the three tuition
+// prices plus the savings figures beside them — so a doc may repeat "$750 under
+// full tuition", but may not invent an amount of its own.
+// Pull dollar amounts without letting ordinary punctuation ride along: a price
+// at the end of a clause ("($1,500, then $1,850)") must normalise to the same
+// token as the same price mid-sentence, or the check invents a stray. Anything
+// under three digits is prose, not tuition ("a $30B bank").
+const amounts = (source) => (source.match(/\$[\d,]+/g) || [])
+  .map((a) => a.replace(/,+$/, ''))
+  .filter((a) => a.replace(/\D/g, '').length >= 3);
+const pagePrices = new Set(amounts(html));
+const DOCS = ['docs/seat-request-replies.md', 'docs/enrollment-push.md'];
+for (const docPath of DOCS) {
+  if (!existsSync(join(root, docPath))) {
+    ok(docPath + ' absent — skipping its price check');
+    continue;
+  }
+  const doc = read(docPath);
+  for (const w of rail) {
+    must(docPath + ' quotes the "' + w.key + '" price ' + w.price, doc.includes(w.price));
+    must(docPath + ' quotes the "' + w.key + '" dates: ' + JSON.stringify(w.dates),
+      doc.includes(w.dates));
+  }
+  const stray = [...new Set(amounts(doc))].filter((p) => !pagePrices.has(p));
+  must(docPath + ' quotes no amount the page does not print' +
+    (stray.length ? ' (found ' + stray.join(', ') + ')' : ''), stray.length === 0);
+}
+
+/* --- 7. Send-ready copy must not outlive its window --------------------- */
+// The push doc is finished outbound copy with a price in it, which makes it the
+// one file that is actively dangerous once its window closes. It declares the
+// window it was written for and whether it is still in service; while it says
+// "active", the declared window has to be the live one. Failing here is the
+// point — it is the repo saying "you have sendable copy quoting a closed
+// window." The fix is to rewrite it for the new window or retire it.
+const pushPath = 'docs/enrollment-push.md';
+if (existsSync(join(root, pushPath))) {
+  const push = read(pushPath);
+  const declared = (push.match(/<!--\s*push-window:\s*([a-z]+)\s*-->/) || [])[1];
+  const status = (push.match(/<!--\s*push-status:\s*(active|retired)\s*-->/) || [])[1];
+  must(pushPath + ' declares a push-window of ' + ORDER.map((k) => '"' + k + '"').join('/') +
+    ' (got ' + JSON.stringify(declared) + ')', ORDER.includes(declared));
+  must(pushPath + ' declares push-status "active" or "retired" (got ' +
+    JSON.stringify(status) + ')', status !== undefined);
+  if (status === 'active' && ORDER.includes(declared)) {
+    must(pushPath + ' is active and its "' + declared + '" window is still live on ' + asOf +
+      (declared === live
+        ? ''
+        : ' — the live window is "' + live + '" (' + liveRow.price +
+          '), so this copy would quote a closed price. Rewrite it for "' + live +
+          '" or set push-status: retired'),
+      declared === live);
+  } else if (status === 'retired') {
+    ok(pushPath + ' is retired — window currency not enforced');
+  }
+} else {
+  ok(pushPath + ' absent — skipping the push staleness check');
+}
+
+/* --- 8. What to expect on the day --------------------------------------- */
+// The live look is a human step. This prints exactly what to look for so the
+// check on the day is a comparison, not a judgement call.
 must('exactly one rail window matches the active date',
   rail.filter((w) => w.key === live).length === 1);
 
