@@ -34,6 +34,16 @@ for (const fact of [
   'Tenafly, New Jersey', '22.5 live hours', 'No coding required',
 ]) must('fact: ' + fact, html.includes(fact));
 
+for (const pricingWindow of [
+  '$1,950', 'Enroll through Sep 13', '$2,250', 'Sep 14–27', '$2,500', 'From Sep 28',
+]) must('pricing window: ' + pricingWindow, html.includes(pricingWindow));
+must('structured launch deadline', html.includes('"priceValidUntil": "2026-09-13"'));
+must('structured standard window', html.includes('"validFrom": "2026-09-14"') && html.includes('"priceValidUntil": "2026-09-27"'));
+must('structured full start', html.includes('"validFrom": "2026-09-28"'));
+must('registration shows extended launch deadline', register.includes('$1,950 through September 13'));
+must('tuition script uses extended boundaries', js.includes("isoDate <= '2026-09-13'") && js.includes("isoDate <= '2026-09-27'"));
+must('old pricing windows removed', !/Sep(?:tember)?\s+(?:6|7|20|21)\b|2026-09-(?:06|07|20|21)/i.test(html + register + js + readme));
+
 for (const date of [
   'Mon, Oct 5', 'Tue, Oct 6', 'Mon, Oct 12', 'Tue, Oct 13', 'Wed, Oct 14',
   'Mon, Oct 19', 'Tue, Oct 20', 'Mon, Oct 26', 'Tue, Oct 27',
@@ -45,14 +55,31 @@ for (const capability of [
   'documents', 'photos',
 ]) must('capability: ' + capability, html.toLowerCase().includes(capability));
 
-for (const section of ['possibilities', 'method', 'program', 'instructor', 'enroll', 'faq']) {
+for (const section of ['possibilities', 'method', 'fundamentals', 'program', 'instructor', 'enroll', 'faq']) {
   must('section #' + section, new RegExp(`id=["']${section}["']`).test(html));
 }
 
+const fundamentals = (html.match(/<section class="fundamentals[\s\S]*?<\/section>/) || [])[0] || '';
+for (const concept of [
+  'Large language model (LLM)', 'Agent', 'Agentic system', 'Tools', 'Memory',
+  'Evidence', 'Human approval',
+]) must('fundamental: ' + concept, fundamentals.includes(concept));
+for (const sessionMap of [
+  'Sessions 1–3', 'Session 4', 'Sessions 4–5', 'Sessions 5 &amp; 8',
+  'Sessions 6–7', 'Sessions 4 &amp; 9', 'Every session',
+]) must('fundamentals curriculum map: ' + sessionMap, fundamentals.includes(sessionMap));
+must('fundamentals require no coding knowledge', fundamentals.includes('No coding knowledge is assumed'));
+
 for (const asset of [
+  'assets/multigenerational-agent-workshop.webp',
+  'assets/intergenerational-travel-planning.webp',
   'assets/entrepreneur-workflow.png', 'assets/household-decisions.png',
   'assets/life-archive.png', 'assets/adam-behrman.jpg',
 ]) must('media wired: ' + asset, html.includes(asset) && existsSync(join(root, asset)));
+
+const landingPhotos = [...html.matchAll(/<img\s+[^>]*src=["']([^"']+\.(?:png|jpe?g|webp))["']/gi)]
+  .map((match) => match[1]);
+must('no landing photo is reused', new Set(landingPhotos).size === landingPhotos.length);
 
 must('register route linked', /href=["']register\//.test(html));
 must('checkout configuration hook', /data-checkout-url/.test(register) && /data-checkout-link/.test(register));
@@ -65,6 +92,7 @@ must('welcome does not expose payment details', !/card number|payment method id|
 must('no test Stripe URL shipped', !/buy\.stripe\.com\/test_/i.test(html + register + welcome + terms + privacy + js));
 
 const brandedSurfaces = [html, register, welcome, terms, privacy, notFound, socialCard, concepts];
+const publicCopy = [...brandedSurfaces, readme].join('\n');
 must('AgentX AI Course brands every public surface', brandedSurfaces.every((page) => page.includes('AgentX AI Course')));
 must('course contact is Adam', [html, register, welcome, terms, privacy].every((page) => page.includes('adam.behrman@gmail.com')));
 must('canonical uses agentxaicourse.com', html.includes('<link rel="canonical" href="https://agentxaicourse.com/">'));
@@ -83,6 +111,12 @@ must('no tracker', !/googletagmanager|google-analytics|gtag\(|fbq\(|hotjar/i.tes
 must('no filler storage copy', !/typed work stays|clear local work|course checkmarks|files you downloaded/i.test(html));
 must('no stale September offer', !/September 18|16 live instructional hours|Agentic AI Weekend/i.test(brandedSurfaces.join('\n')));
 must('no fake social proof', !/testimonial|star rating|students enrolled|spots left/i.test(html));
+must('no separate paid AI account prerequisite', !new RegExp(['ChatGPT', 'Plus'].join(' '), 'i').test(publicCopy));
+must('no power-accessory requirement', !/charg(?:er|ing)/i.test(publicCopy));
+must('no technical Mac chip-family label', !/Apple\s+Silicon/i.test(publicCopy));
+must('plain Mac compatibility', html.includes('M1, M2, M3, M4, or newer M-series') && html.includes('About This Mac'));
+must('Windows compatibility', [html, register, terms].every((page) => /Windows 10\/11/.test(page)));
+must('Intel Mac exclusion is explained', html.includes('Macs showing an Intel processor are not supported'));
 
 console.log('');
 if (failures) {

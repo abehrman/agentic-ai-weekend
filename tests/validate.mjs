@@ -86,8 +86,8 @@ const exact = [
   'Save $750 versus full tuition', 'Save $400 versus full tuition',
   'Your tuition is determined by the date your completed payment is received.',
   'One program. One small cohort. Only the payment date changes the price.',
-  // prerequisites / subscription
-  'ChatGPT Plus', 'separate from tuition', 'command-line experience',
+  // prerequisites
+  'command-line experience',
   // take-home rack outcomes + certificate
   'Personal Agent Map', 'safety and permissions checklist', 'next-30-days launch plan',
   'AgentX Certificate of Completion',

@@ -7,6 +7,7 @@ import { dirname, join } from 'node:path';
 const here = dirname(fileURLToPath(import.meta.url));
 const steps = [
   ['node', [join(here, 'marketing.mjs')]],
+  ['node', ['--test', join(here, 'window.test.mjs')]],
 ];
 
 let failed = 0;

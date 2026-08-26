@@ -1,4 +1,12 @@
-(() => {
+function priceWindow(isoDate) {
+  if (isoDate <= '2026-09-13') return 'launch';
+  if (isoDate <= '2026-09-27') return 'standard';
+  return 'full';
+}
+
+if (typeof module !== 'undefined' && module.exports) module.exports = { priceWindow };
+
+if (typeof document !== 'undefined') (() => {
   'use strict';
 
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
@@ -162,28 +170,29 @@
     return `${value('year')}-${value('month')}-${value('day')}`;
   }
 
-  function priceWindow(isoDate) {
-    if (isoDate <= '2026-09-06') return 'launch';
-    if (isoDate <= '2026-09-20') return 'standard';
-    return 'full';
-  }
-
   function setupTuition() {
     const tuition = document.querySelector('[data-tuition]');
-    if (!tuition) return;
     const windowName = priceWindow(dateInNewYork());
-    tuition.querySelectorAll('[data-price-window]').forEach((card) => {
+    tuition?.querySelectorAll('[data-price-window]').forEach((card) => {
       card.classList.toggle('is-current', card.dataset.priceWindow === windowName);
     });
 
     const status = document.querySelector('[data-price-status]');
-    if (!status) return;
     const messages = {
-      launch: 'Launch tuition of $1,950 is available through September 6.',
-      standard: 'Standard tuition is $2,250 through September 20.',
+      launch: 'Launch tuition of $1,950 is available through September 13.',
+      standard: 'Standard tuition is $2,250 through September 27.',
       full: 'Full tuition is $2,500.',
     };
-    status.textContent = messages[windowName];
+    if (status) status.textContent = messages[windowName];
+
+    const current = {
+      launch: { price: '$1,950', fact: '$1,950 through September 13', deadline: 'Launch rate through September 13, 2026' },
+      standard: { price: '$2,250', fact: '$2,250 through September 27', deadline: 'Standard rate through September 27, 2026' },
+      full: { price: '$2,500', fact: '$2,500 from September 28', deadline: 'Full tuition from September 28, 2026' },
+    }[windowName];
+    document.querySelectorAll('[data-current-price]').forEach((node) => { node.textContent = current.price; });
+    document.querySelectorAll('[data-current-fact]').forEach((node) => { node.textContent = current.fact; });
+    document.querySelectorAll('[data-current-deadline]').forEach((node) => { node.textContent = current.deadline; });
   }
 
   function setupCheckoutLinks() {
@@ -229,7 +238,4 @@
   setupCheckoutLinks();
   setupReadiness();
 
-  if (typeof module !== 'undefined' && module.exports) {
-    module.exports = { priceWindow };
-  }
 })();

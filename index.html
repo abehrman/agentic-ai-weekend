@@ -58,9 +58,9 @@
         "description": "Executive advisor on AI and automation; former McKinsey banking and advanced analytics leader; former Chief Model Risk Officer at a $30B bank; hands-on builder of AI assistants and agent workflows."
       },
       "offers": [
-        {"@type": "Offer", "name": "Launch tuition", "price": "1950", "priceCurrency": "USD", "priceValidUntil": "2026-09-06", "url": "https://agentxaicourse.com/register/"},
-        {"@type": "Offer", "name": "Standard tuition", "price": "2250", "priceCurrency": "USD", "validFrom": "2026-09-07", "priceValidUntil": "2026-09-20", "url": "https://agentxaicourse.com/register/"},
-        {"@type": "Offer", "name": "Full tuition", "price": "2500", "priceCurrency": "USD", "validFrom": "2026-09-21", "url": "https://agentxaicourse.com/register/"}
+        {"@type": "Offer", "name": "Launch tuition", "price": "1950", "priceCurrency": "USD", "priceValidUntil": "2026-09-13", "url": "https://agentxaicourse.com/register/"},
+        {"@type": "Offer", "name": "Standard tuition", "price": "2250", "priceCurrency": "USD", "validFrom": "2026-09-14", "priceValidUntil": "2026-09-27", "url": "https://agentxaicourse.com/register/"},
+        {"@type": "Offer", "name": "Full tuition", "price": "2500", "priceCurrency": "USD", "validFrom": "2026-09-28", "url": "https://agentxaicourse.com/register/"}
       ]
     }
   }
@@ -105,10 +105,10 @@
 
       <div class="hero__media" aria-label="Everyday AI possibilities">
         <figure class="hero-photo hero-photo--main">
-          <img src="assets/entrepreneur-workflow.png" alt="A young entrepreneur planning with a laptop, phone, and notebook" width="1122" height="1402" fetchpriority="high">
+          <img src="assets/multigenerational-agent-workshop.webp" alt="Three generations planning together around a laptop" width="972" height="1619" fetchpriority="high">
         </figure>
         <figure class="hero-photo hero-photo--secondary">
-          <img src="assets/life-archive.png" alt="An older adult organizing family photos and documents with a personal computer" width="1122" height="1402">
+          <img src="assets/intergenerational-travel-planning.webp" alt="A mother and daughter comparing a map and tablet while planning a trip" width="1122" height="1402">
         </figure>
         <span class="signal-tag signal-tag--one">Research the decision</span>
         <span class="signal-tag signal-tag--two">Remember what matters</span>
@@ -170,28 +170,46 @@
 
     <section class="method section section--ink" id="method" aria-labelledby="method-title">
       <div class="method__intro reveal">
-        <p class="eyebrow">From chat to capability</p>
-        <h2 id="method-title">You do not just learn prompts. You build a working system.</h2>
-        <p>A useful agent has a goal, the right context, approved tools, evidence, memory, and a clear human decision point. You learn each part by making it work.</p>
+        <p class="eyebrow">Agentic AI fundamentals</p>
+        <h2 id="method-title">Learn the language. Then build the system.</h2>
+        <p>You learn what makes an agent different from a chatbot, how the parts work together, and where human judgment belongs. Then you make each part useful.</p>
         <a class="button button--light" href="#program">Explore the build</a>
       </div>
 
-      <div class="agent-system reveal" data-agent-system>
-        <div class="agent-system__canvas">
-          <picture class="agent-system__visual">
-            <source media="(max-width: 599px)" srcset="assets/agent-map-mobile.svg">
-            <img src="assets/agent-map.svg" alt="A personal agent map showing context informing a plan, approved tools producing an output, evidence checking the output, and human approval at the final gate" width="1120" height="580" loading="lazy">
-          </picture>
-          <div class="agent-system__progress" aria-hidden="true"><span></span></div>
+      <div class="method__body">
+        <section class="fundamentals reveal" id="fundamentals" aria-labelledby="fundamentals-title">
+          <div class="fundamentals__heading">
+            <h3 id="fundamentals-title">Seven ideas.<br>One working system.</h3>
+            <p>The nine sessions move from the language engine to a personal assistant you can direct, check, and control. No coding knowledge is assumed.</p>
+          </div>
+          <dl class="fundamentals-grid">
+            <div><dt>Large language model (LLM)<span>Sessions 1–3</span></dt><dd>The engine that understands and generates language from your instructions and context.</dd></div>
+            <div><dt>Agent<span>Session 4</span></dt><dd>An LLM working toward a goal in a loop: plan, act, check, and adjust.</dd></div>
+            <div><dt>Agentic system<span>Sessions 4–5</span></dt><dd>The full setup around an agent: boundaries, tools, memory, evidence, and approval.</dd></div>
+            <div><dt>Tools<span>Sessions 5 &amp; 8</span></dt><dd>Approved ways for an agent to search, read files, use software, or create an output.</dd></div>
+            <div><dt>Memory<span>Sessions 6–7</span></dt><dd>Context you choose to keep so the system can recall preferences and prior work.</dd></div>
+            <div><dt>Evidence<span>Sessions 4 &amp; 9</span></dt><dd>Sources and checks that help you verify a claim before relying on it.</dd></div>
+            <div><dt>Human approval<span>Every session</span></dt><dd>The final gate: you decide what is saved, shared, or used.</dd></div>
+          </dl>
+        </section>
+
+        <div class="agent-system reveal" data-agent-system>
+          <div class="agent-system__canvas">
+            <picture class="agent-system__visual">
+              <source media="(max-width: 599px)" srcset="assets/agent-map-mobile.svg">
+              <img src="assets/agent-map.svg" alt="A personal agent map showing context informing a plan, approved tools producing an output, evidence checking the output, and human approval at the final gate" width="1120" height="580" loading="lazy">
+            </picture>
+            <div class="agent-system__progress" aria-hidden="true"><span></span></div>
+          </div>
+          <ol class="agent-steps">
+            <li class="is-active"><span>01</span><div><strong>Name the goal</strong><small>Start with a real decision, project, or recurring task.</small></div></li>
+            <li><span>02</span><div><strong>Give useful context</strong><small>Add only what changes the answer.</small></div></li>
+            <li><span>03</span><div><strong>Connect approved tools</strong><small>Decide what the agent may reach and do.</small></div></li>
+            <li><span>04</span><div><strong>Check the evidence</strong><small>Find weak claims before they become decisions.</small></div></li>
+            <li><span>05</span><div><strong>Remember with permission</strong><small>Keep what helps. Correct what changed.</small></div></li>
+            <li><span>06</span><div><strong>You approve the result</strong><small>Nothing important leaves without human judgment.</small></div></li>
+          </ol>
         </div>
-        <ol class="agent-steps">
-          <li class="is-active"><span>01</span><div><strong>Name the goal</strong><small>Start with a real decision, project, or recurring task.</small></div></li>
-          <li><span>02</span><div><strong>Give useful context</strong><small>Add only what changes the answer.</small></div></li>
-          <li><span>03</span><div><strong>Connect approved tools</strong><small>Decide what the agent may reach and do.</small></div></li>
-          <li><span>04</span><div><strong>Check the evidence</strong><small>Find weak claims before they become decisions.</small></div></li>
-          <li><span>05</span><div><strong>Remember with permission</strong><small>Keep what helps. Correct what changed.</small></div></li>
-          <li><span>06</span><div><strong>You approve the result</strong><small>Nothing important leaves without human judgment.</small></div></li>
-        </ol>
       </div>
     </section>
 
@@ -287,20 +305,20 @@
 
       <div class="tuition reveal" data-tuition>
         <article class="tuition-card" data-price-window="launch">
-          <p>Launch</p><strong>$1,950</strong><span>Enroll through Sep 6</span><small>$86.67 per live hour</small>
+          <p>Launch</p><strong>$1,950</strong><span>Enroll through Sep 13</span><small>$86.67 per live hour</small>
         </article>
         <article class="tuition-card" data-price-window="standard">
-          <p>Standard</p><strong>$2,250</strong><span>Sep 7–20</span><small>$100 per live hour</small>
+          <p>Standard</p><strong>$2,250</strong><span>Sep 14–27</span><small>$100 per live hour</small>
         </article>
         <article class="tuition-card" data-price-window="full">
-          <p>Full</p><strong>$2,500</strong><span>From Sep 21</span><small>$111.11 per live hour</small>
+          <p>Full</p><strong>$2,500</strong><span>From Sep 28</span><small>$111.11 per live hour</small>
         </article>
       </div>
 
       <div class="enrollment__action reveal">
         <div>
           <p class="price-status" data-price-status>Launch tuition is available now.</p>
-          <p>Tuition includes nine live sessions, the preflight clinic, course materials, setup and recovery guidance, and the complete take-home system. ChatGPT Plus is separate.</p>
+          <p>Tuition includes nine live sessions, the preflight clinic, course materials, guided setup, recovery guidance, and the complete take-home system.</p>
         </div>
         <a class="button button--black" href="register/">Review and join the cohort</a>
       </div>
@@ -315,23 +333,23 @@
       <div class="fit__check reveal">
         <h3>Bring</h3>
         <ul>
-          <li>Apple Silicon Mac or Windows 10/11 laptop</li>
+          <li>A Mac with an M1, M2, M3, M4, or newer M-series chip, or a Windows 10/11 laptop</li>
           <li>Permission to install software</li>
-          <li>Active ChatGPT Plus subscription</li>
-          <li>Charger and one real goal</li>
+          <li>Comfort with browser tabs and basic files</li>
+          <li>One real goal you want AI to help move</li>
         </ul>
-        <p>Intel Macs are not supported for this cohort. A preflight clinic helps finish setup before Session 1.</p>
+        <p>Mac check: open the Apple menu and choose About This Mac. A supported Mac shows a Chip named M1, M2, M3, M4, or a newer M-series model. Macs showing an Intel processor are not supported. Windows 10 and 11 laptops are supported. A preflight clinic helps finish setup before Session 1.</p>
       </div>
     </section>
 
     <section class="faq section section--paper" id="faq" aria-labelledby="faq-title">
       <div class="section-heading reveal"><p class="eyebrow">The practical questions</p><h2 id="faq-title">Before you join.</h2></div>
       <div class="faq-list reveal">
-        <details><summary>Is this for complete beginners?</summary><p>Yes. The course begins with an ordinary ChatGPT task and builds one capability at a time. You need everyday laptop comfort, not coding experience.</p></details>
+        <details><summary>Is this for complete beginners?</summary><p>Yes. The course begins with an ordinary AI task and builds one capability at a time. You need everyday laptop comfort, not coding experience.</p></details>
         <details><summary>What exactly will I build?</summary><p>You will create a Personal Agent Map, configure a local assistant, add approved memory, connect it to Slack, complete one practical mission, and leave with verification and permissions methods.</p></details>
         <details><summary>Can it help with financial or medical choices?</summary><p>It can help organize research, compare scenarios, surface sources, and prepare better questions. It does not replace a qualified financial, legal, or medical professional, diagnose conditions, or execute portfolio decisions.</p></details>
         <details><summary>Where is the course held?</summary><p>In person in Tenafly, New Jersey. The exact venue and arrival details are shared with enrolled learners.</p></details>
-        <details><summary>What software or subscriptions do I need?</summary><p>Bring a supported laptop with installation rights and an active ChatGPT Plus subscription. Course setup for Hermes Desktop, Hindsight, and Slack is guided during preflight and class.</p></details>
+        <details><summary>What software do I need?</summary><p>Bring the supported laptop described above with permission to install software. Setup for Hermes Desktop, Hindsight, and Slack is guided during preflight and class.</p></details>
         <details><summary>How does enrollment work?</summary><p>Review the cohort details, complete secure payment through Stripe, and receive the onboarding and preflight steps by email.</p></details>
       </div>
     </section>
