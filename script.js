@@ -170,6 +170,50 @@ if (typeof document !== 'undefined') (() => {
     return `${value('year')}-${value('month')}-${value('day')}`;
   }
 
+  const campaignKeys = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term'];
+
+  function campaignParams() {
+    const current = new URLSearchParams(window.location.search);
+    const campaign = new URLSearchParams();
+
+    campaignKeys.forEach((key) => {
+      const value = current.get(key);
+      if (value && /^[a-z0-9_-]{1,150}$/i.test(value)) campaign.set(key, value);
+    });
+
+    try {
+      if ([...campaign].length) window.sessionStorage.setItem('agentx_campaign', campaign.toString());
+      else {
+        const saved = new URLSearchParams(window.sessionStorage.getItem('agentx_campaign') || '');
+        campaignKeys.forEach((key) => {
+          const value = saved.get(key);
+          if (value && /^[a-z0-9_-]{1,150}$/i.test(value)) campaign.set(key, value);
+        });
+      }
+    } catch (_) {
+      // Checkout still works when storage is blocked.
+    }
+
+    return campaign;
+  }
+
+  function withCampaign(url, campaign) {
+    const destination = new URL(url, window.location.href);
+    campaign.forEach((value, key) => destination.searchParams.set(key, value));
+    return destination.toString();
+  }
+
+  function setupCampaignAttribution() {
+    const campaign = campaignParams();
+    if (![...campaign].length) return;
+
+    document.querySelectorAll('a[href]').forEach((link) => {
+      const destination = new URL(link.href, window.location.href);
+      if (destination.origin !== window.location.origin || !/\/register\/$/.test(destination.pathname)) return;
+      link.href = withCampaign(link.href, campaign);
+    });
+  }
+
   function setupTuition() {
     const tuition = document.querySelector('[data-tuition]');
     const windowName = priceWindow(dateInNewYork());
@@ -201,8 +245,9 @@ if (typeof document !== 'undefined') (() => {
     if (!links.length) return;
 
     if (checkoutUrl) {
+      const campaign = campaignParams();
       links.forEach((link) => {
-        link.href = checkoutUrl;
+        link.href = withCampaign(checkoutUrl, campaign);
         link.dataset.checkoutReady = 'true';
         if (link.dataset.liveLabel) link.textContent = link.dataset.liveLabel;
       });
@@ -234,6 +279,7 @@ if (typeof document !== 'undefined') (() => {
   setupActiveNavigation();
   setupStoryRail();
   setupAgentSystem();
+  setupCampaignAttribution();
   setupTuition();
   setupCheckoutLinks();
   setupReadiness();

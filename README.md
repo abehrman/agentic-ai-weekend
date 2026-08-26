@@ -49,5 +49,8 @@ npx firebase-tools deploy --only hosting --project agentx-ai-course
 
 The static site never handles card data. The registration page hands off to a
 Stripe-hosted Payment Link. Never place a `buy.stripe.com/test_…` URL in shipped
-HTML. Live checkout remains disabled until the Stripe account and enrollment
-capability are active.
+HTML. Live enrollment uses Stripe-hosted Checkout through one active Payment
+Link. Stripe handles card data and closes that link at its completed-session
+limit. At each tuition boundary, deactivate the old link, expire its open
+Checkout Sessions, count cumulative completions, and create the next link with
+`20 - cumulative completions` as its limit before swapping the site URL.
