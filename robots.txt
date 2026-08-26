@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://abehrman.github.io/agentic-ai-weekend/sitemap.xml
+Sitemap: https://agentxaicourse.com/sitemap.xml

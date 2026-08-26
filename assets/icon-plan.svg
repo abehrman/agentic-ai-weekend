@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256" font-family="Arial, Helvetica, sans-serif">
+<rect x="53" y="74" width="25.50" height="25.50" fill="#5147D9" rx="2" stroke="#5147D9" stroke-width="8.25"/><line x1="96.50" y1="86.75" x2="203" y2="86.75" stroke="#19191D" stroke-width="8.25" stroke-linecap="round"/><rect x="53" y="115.25" width="25.50" height="25.50" fill="none" rx="2" stroke="#19191D" stroke-width="8.25"/><line x1="96.50" y1="128" x2="203" y2="128" stroke="#19191D" stroke-width="8.25" stroke-linecap="round"/><rect x="53" y="156.50" width="25.50" height="25.50" fill="none" rx="2" stroke="#19191D" stroke-width="8.25"/><line x1="96.50" y1="169.25" x2="203" y2="169.25" stroke="#19191D" stroke-width="8.25" stroke-linecap="round"/>
+</svg>

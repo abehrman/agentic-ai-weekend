@@ -1,65 +1,37 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="robots" content="noindex, nofollow">
-<title>OG card (render source, not a site page)</title>
-<style>
-  html, body { margin: 0; padding: 0; }
-  .card {
-    width: 1200px; height: 630px;
-    box-sizing: border-box;
-    background: #111619;
-    color: #F4F1E8;
-    font-family: "Archivo SemiCondensed", "Arial Narrow", "Roboto Condensed", system-ui, sans-serif;
-    padding: 68px 80px;
-    position: relative;
-    display: flex; flex-direction: column; justify-content: space-between;
-    overflow: hidden;
-  }
-  /* bench plane entering from the lower right */
-  .bench { position: absolute; right: -40px; bottom: -60px; width: 720px; height: 360px;
-    background: #28312F; transform: rotate(-6deg); border-top: 3px solid #B9C2BE; }
-  .clamp { position: absolute; right: 470px; bottom: 150px; width: 34px; height: 26px; background: #E85D36; border-radius: 4px; }
-  .stop { position: absolute; right: 96px; bottom: 150px; width: 10px; height: 78px; background: #E85D36; border-radius: 4px; }
-  .stopbar { position: absolute; right: 96px; bottom: 220px; width: 84px; height: 10px; background: #E85D36; border-radius: 4px; }
-  .top { display: flex; align-items: center; gap: 16px; position: relative; z-index: 2; }
-  .mark { width: 22px; height: 22px; background: #E85D36; border-radius: 4px; }
-  .wm { font-size: 30px; font-weight: 800; letter-spacing: 0.01em;
-    font-family: "Archivo SemiCondensed", "Arial Narrow", system-ui, sans-serif; }
-  .wm .x { color: #E85D36; }
-  .eyebrow {
-    font-size: 20px; letter-spacing: 0.14em; text-transform: uppercase;
-    color: #E85D36; font-weight: 700;
-  }
-  h1 { font-size: 92px; line-height: 0.98; letter-spacing: -0.01em; margin: 0; font-weight: 800; position: relative; z-index: 2; }
-  h1 span { display: block; }
-  .facts {
-    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
-    font-size: 25px; font-weight: 600; color: #B9C2BE;
-    font-variant-numeric: tabular-nums; position: relative; z-index: 2;
-  }
-  .facts .sep { color: #7FA7B8; padding: 0 12px; }
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=1200, initial-scale=1">
+  <title>AgentX AI Course social card</title>
+  <style>
+    * { box-sizing: border-box; }
+    html, body { width: 1200px; height: 630px; margin: 0; overflow: hidden; }
+    body { display: grid; grid-template-columns: 56% 44%; background: #fff; color: #101010; font-family: Arial, Helvetica, sans-serif; }
+    .copy { position: relative; padding: 48px 54px 44px; }
+    .brand { display: flex; align-items: center; gap: 10px; font-size: 25px; font-weight: 800; letter-spacing: -1px; }
+    .signal { width: 13px; height: 13px; background: #2b22fa; }
+    .brand b { color: #2b22fa; }
+    .eyebrow { margin: 54px 0 22px; color: #666; font-family: monospace; font-size: 14px; font-weight: 700; letter-spacing: 1.6px; text-transform: uppercase; }
+    h1 { margin: 0; font-size: 74px; font-weight: 800; letter-spacing: -5.5px; line-height: .89; }
+    h1 em { color: #2b22fa; font-style: normal; }
+    .facts { position: absolute; right: 54px; bottom: 42px; left: 54px; display: flex; justify-content: space-between; padding-top: 18px; border-top: 1px solid #cfcfc8; font-family: monospace; font-size: 14px; font-weight: 700; text-transform: uppercase; }
+    .photo { position: relative; overflow: hidden; background: #101010; }
+    .photo img { width: 100%; height: 100%; object-fit: cover; object-position: 48% 46%; }
+    .tag { position: absolute; top: 52px; left: -28px; padding: 14px 18px; background: #fff; border: 1px solid #101010; box-shadow: 7px 7px 0 #101010; font-family: monospace; font-size: 13px; font-weight: 700; }
+    .tag::before { content: ""; display: inline-block; width: 8px; height: 8px; margin-right: 10px; background: #2b22fa; }
+  </style>
 </head>
 <body>
-  <div class="card">
-    <div class="bench"></div>
-    <div class="clamp"></div>
-    <div class="stopbar"></div>
-    <div class="stop"></div>
-
-    <div class="top">
-      <span class="mark"></span>
-      <span class="wm">Agent<span class="x">X</span></span>
-      <span class="eyebrow">Agentic AI Weekend</span>
-    </div>
-    <div>
-      <h1><span>Bring the work.</span><span>Direct the agent.</span><span>Keep the final say.</span></h1>
-    </div>
-    <div class="facts">
-      September 18&ndash;20, 2026 <span class="sep">/</span> Tenafly, New Jersey <span class="sep">/</span> No coding required
-    </div>
-  </div>
+  <section class="copy">
+    <div class="brand"><span class="signal"></span><span>Agent<b>X</b> AI Course</span></div>
+    <p class="eyebrow">Agentic AI Intensive · October cohort</p>
+    <h1>Build your<br><em>second-brain.</em><br>Work with<br><em>superhuman</em> reach.</h1>
+    <div class="facts"><span>Oct 5–27, 2026</span><span>Tenafly, NJ</span></div>
+  </section>
+  <section class="photo">
+    <img src="assets/entrepreneur-workflow.png" alt="">
+    <span class="tag">Nine live sessions</span>
+  </section>
 </body>
 </html>

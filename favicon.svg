@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="AgentX">
-  <rect width="64" height="64" rx="12" fill="#111619"/>
-  <rect x="6.5" y="6.5" width="51" height="51" rx="9" fill="none" stroke="#3c4644" stroke-width="1.5"/>
-  <text x="32" y="45" text-anchor="middle" font-family="Arial Narrow, Helvetica, Arial, sans-serif" font-size="34" font-weight="800">
-    <tspan fill="#F4F1E8">A</tspan><tspan fill="#E85D36">X</tspan>
+  <rect width="64" height="64" rx="12" fill="#101010"/>
+  <rect x="7" y="7" width="10" height="10" fill="#2B22FA"/>
+  <text x="32" y="46" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="33" font-weight="800" letter-spacing="-4">
+    <tspan fill="#FFFFFF">A</tspan><tspan fill="#766FFF">X</tspan>
   </text>
 </svg>

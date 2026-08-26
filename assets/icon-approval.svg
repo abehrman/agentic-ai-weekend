@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256" font-family="Arial, Helvetica, sans-serif">
+<circle cx="128" cy="96.50" r="22.50" fill="none" stroke="#19191D" stroke-width="8.25"/><path d="M81.50,195.50 C81.50,141.50 174.50,141.50 174.50,195.50" fill="none" stroke="#19191D" stroke-width="8.25" stroke-linecap="round" stroke-linejoin="round"/><circle cx="174.50" cy="165.50" r="27" fill="none" stroke="#2F7D64" stroke-width="8.25"/><path d="M161,165.50 L172.34,176.84 L189.35,154.16" fill="none" stroke="#2F7D64" stroke-width="7.84" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

@@ -7,3 +7,4 @@ playwright-report/
 PROJECT_BRIEF.md
 AGENTS.md
 .playwright-mcp/
+.firebase/

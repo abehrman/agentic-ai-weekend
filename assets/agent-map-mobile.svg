@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 500" width="360" height="500" role="img" aria-labelledby="title desc">
+  <title id="title">Personal agent system</title>
+  <desc id="desc">Context informs a plan. The plan uses approved tools and evidence to produce an output. A human gives final approval.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0 0L8 4L0 8Z" fill="#19191d"/>
+    </marker>
+    <style>
+      .node{fill:#fff;stroke:#19191d;stroke-width:1.5}.plan{fill:#ecebff;stroke:#2b22fa;stroke-width:2}.evidence{stroke-dasharray:3 5}.approval{stroke:#157a5b;stroke-width:2.5}.line{stroke:#19191d;stroke-width:1.5;marker-end:url(#arrow)}.label{font:700 16px Arial,Helvetica,sans-serif;fill:#19191d}.meta{font:700 9px "Courier New",monospace;letter-spacing:1px;fill:#696969}.icon{fill:#2b22fa}.final{font:700 9px "Courier New",monospace;letter-spacing:1px;fill:#fff}
+    </style>
+  </defs>
+
+  <rect class="node" x="22" y="10" width="316" height="58" rx="6"/>
+  <rect class="icon" x="42" y="31" width="15" height="15" rx="2"/>
+  <text class="label" x="72" y="43">Context</text><text class="meta" x="264" y="43">WHAT MATTERS</text>
+  <line class="line" x1="180" y1="68" x2="180" y2="91"/><text class="meta" x="190" y="84">INFORMS</text>
+
+  <rect class="node plan" x="22" y="94" width="316" height="58" rx="6"/>
+  <path d="M42 114h16v18H42zm4 5h8m-8 4h8m-8 4h6" fill="none" stroke="#2b22fa" stroke-width="1.7"/>
+  <text class="label" x="72" y="127">Plan</text><text class="meta" x="256" y="127">CLEAR GOAL</text>
+  <line class="line" x1="180" y1="152" x2="180" y2="175"/><text class="meta" x="190" y="168">USES</text>
+
+  <rect class="node" x="22" y="178" width="316" height="58" rx="6"/>
+  <circle cx="50" cy="207" r="9" fill="none" stroke="#19191d" stroke-width="1.7"/><circle class="icon" cx="50" cy="207" r="3"/>
+  <text class="label" x="72" y="211">Approved tools</text><text class="meta" x="269" y="211">PERMITTED</text>
+  <line class="line" x1="180" y1="236" x2="180" y2="259"/><text class="meta" x="190" y="252">CHECKS</text>
+
+  <rect class="node evidence" x="22" y="262" width="316" height="58" rx="6"/>
+  <circle cx="48" cy="289" r="8" fill="none" stroke="#19191d" stroke-width="1.7"/><path d="M54 295l7 7M44 289l3 3 6-8" fill="none" stroke="#2b22fa" stroke-width="1.7"/>
+  <text class="label" x="72" y="295">Evidence</text><text class="meta" x="269" y="295">VERIFIED</text>
+  <line class="line" x1="180" y1="320" x2="180" y2="343"/><text class="meta" x="190" y="336">PRODUCES</text>
+
+  <rect class="node" x="22" y="346" width="316" height="58" rx="6"/>
+  <path d="M42 365h17v20H42zm4 6h9m-9 5h9" fill="none" stroke="#19191d" stroke-width="1.7"/>
+  <text class="label" x="72" y="379">Output</text><text class="meta" x="250" y="379">READY TO REVIEW</text>
+  <line class="line" x1="180" y1="404" x2="180" y2="427"/><text class="meta" x="190" y="420">APPROVED BY</text>
+
+  <rect class="node approval" x="22" y="430" width="316" height="58" rx="6"/>
+  <circle cx="50" cy="457" r="8" fill="none" stroke="#157a5b" stroke-width="1.8"/><path d="M46 457l3 3 6-7" fill="none" stroke="#157a5b" stroke-width="1.8"/>
+  <text class="label" x="72" y="463">Human approval</text>
+  <rect x="267" y="448" width="54" height="20" rx="3" fill="#157a5b"/><text class="final" x="294" y="462" text-anchor="middle">FINAL</text>
+</svg>
