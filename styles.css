@@ -478,13 +478,31 @@ button, input, select, textarea { font: inherit; }
 .certificate-flow li::before { content: ""; position: absolute; top: 21px; left: 2px; width: 8px; height: 8px; background: #686862; }
 .certificate-flow li:last-child::before { background: var(--violet); box-shadow: 0 0 0 5px rgba(43,34,250,.18); }
 .certificate-note { max-width: 600px; margin: 22px 0 0; color: #85857f; font-size: 12px; line-height: 1.5; }
-.certificate-preview { position: relative; min-width: 0; margin: 0; padding: clamp(14px, 2vw, 26px); border: 1px solid #393939; background: #181818; }
-.certificate-preview::before { content: "PROOF / COMPLETION"; position: absolute; z-index: 2; top: 8px; right: 12px; color: #7b7b75; font-family: var(--mono); font-size: 8px; letter-spacing: .1em; }
-.certificate-preview a { display: block; background: var(--white); box-shadow: 0 18px 50px rgba(0,0,0,.28); transition: transform 350ms cubic-bezier(.2,.7,.2,1), box-shadow 350ms ease; }
-.certificate-preview a:hover { transform: translateY(-5px) rotate(.25deg); box-shadow: 0 26px 70px rgba(0,0,0,.42); }
+.certificate-preview {
+  --certificate-navy: #172133;
+  --certificate-gold: #a88745;
+  --certificate-ivory: #fbf8ef;
+  position: relative;
+  min-width: 0;
+  margin: 0;
+  padding: clamp(20px, 2.5vw, 36px);
+  border: 1px solid var(--certificate-gold);
+  background:
+    linear-gradient(135deg, rgba(168,135,69,.16), transparent 22%, transparent 78%, rgba(168,135,69,.12)),
+    var(--certificate-navy);
+  box-shadow: inset 0 0 0 6px var(--certificate-navy), inset 0 0 0 7px rgba(168,135,69,.42), 0 28px 70px rgba(0,0,0,.32);
+}
+.certificate-preview::before { content: "AGENTX AI COURSE / SAMPLE CREDENTIAL"; position: absolute; z-index: 2; top: 8px; right: 14px; color: #c8a969; font-family: var(--mono); font-size: 8px; letter-spacing: .12em; }
+.certificate-preview a { position: relative; display: block; overflow: hidden; border: 1px solid var(--certificate-gold); background: var(--certificate-ivory); box-shadow: 0 18px 50px rgba(0,0,0,.3); transition: transform 350ms cubic-bezier(.2,.7,.2,1), box-shadow 350ms ease; }
+.certificate-preview a:hover, .certificate-preview a:focus-visible { transform: translateY(-4px); box-shadow: 0 26px 70px rgba(0,0,0,.46); }
+.certificate-preview a:focus-visible { outline-color: var(--certificate-gold); }
 .certificate-preview img { width: 100%; height: auto; }
-.certificate-preview figcaption { display: flex; justify-content: space-between; gap: 18px; padding: 15px 2px 0; color: #969690; font-family: var(--mono); font-size: 10px; letter-spacing: .06em; text-transform: uppercase; }
-.certificate-preview figcaption strong { color: #8e88ff; }
+.certificate-preview__action { position: absolute; right: 14px; bottom: 14px; display: inline-flex; align-items: center; gap: 8px; min-height: 34px; padding: 0 12px; border: 1px solid var(--certificate-gold); background: rgba(23,33,51,.96); color: var(--certificate-ivory); font-family: var(--mono); font-size: 9px; font-weight: 700; letter-spacing: .08em; line-height: 1; text-transform: uppercase; transition: background-color 180ms ease, color 180ms ease; }
+.certificate-preview__action span { color: #d1b471; font-size: 14px; }
+.certificate-preview a:hover .certificate-preview__action, .certificate-preview a:focus-visible .certificate-preview__action { background: var(--certificate-gold); color: var(--certificate-navy); }
+.certificate-preview a:hover .certificate-preview__action span, .certificate-preview a:focus-visible .certificate-preview__action span { color: var(--certificate-navy); }
+.certificate-preview figcaption { display: flex; justify-content: space-between; gap: 18px; padding: 17px 2px 0; color: #a9a9a3; font-family: var(--mono); font-size: 10px; letter-spacing: .06em; line-height: 1.45; text-transform: uppercase; }
+.certificate-preview figcaption strong { color: #d1b471; font-weight: 700; }
 
 .instructor { display: grid; grid-template-columns: .75fr 1.25fr; gap: clamp(56px, 8vw, 136px); align-items: center; }
 .instructor__portrait { margin: 0; }
@@ -802,8 +820,9 @@ button, input, select, textarea { font: inherit; }
   .certificate-showcase { gap: 40px; }
   .certificate-showcase__copy > p:not(.eyebrow, .certificate-note) { margin-top: 24px; font-size: 18px; }
   .certificate-flow { margin: 32px 0 30px; }
-  .certificate-preview { padding: 9px; }
+  .certificate-preview { padding: 11px; box-shadow: inset 0 0 0 3px var(--certificate-navy), inset 0 0 0 4px rgba(168,135,69,.42), 0 18px 44px rgba(0,0,0,.3); }
   .certificate-preview::before { display: none; }
+  .certificate-preview__action { right: 8px; bottom: 8px; min-height: 30px; padding: 0 9px; font-size: 8px; }
   .certificate-preview figcaption { align-items: flex-start; flex-direction: column; gap: 3px; padding-top: 12px; }
   .instructor { gap: 34px; }
   .credential-list { grid-template-columns: 1fr; }

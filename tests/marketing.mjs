@@ -93,7 +93,9 @@ must('no test Stripe URL shipped', !/buy\.stripe\.com\/test_/i.test(html + regis
 
 const brandedSurfaces = [html, register, welcome, terms, privacy, notFound, socialCard, concepts];
 const publicCopy = [...brandedSurfaces, readme].join('\n');
+const stylesheetSurfaces = [html, register, welcome, terms, privacy, notFound, concepts];
 must('AgentX AI Course brands every public surface', brandedSurfaces.every((page) => page.includes('AgentX AI Course')));
+must('stylesheet cache version is consistent', stylesheetSurfaces.every((page) => page.includes('styles.css?v=20260826u')));
 must('course contact is Adam', [html, register, welcome, terms, privacy].every((page) => page.includes('adam.behrman@gmail.com')));
 must('canonical uses agentxaicourse.com', html.includes('<link rel="canonical" href="https://agentxaicourse.com/">'));
 must('open graph uses agentxaicourse.com', html.includes('content="https://agentxaicourse.com/"') && html.includes('content="https://agentxaicourse.com/og-image.png"'));
@@ -130,7 +132,12 @@ for (const certificateAsset of [
 const certificateSvg = read('assets/agentx-certificate-sample.svg');
 const certificatePdf = readFileSync(join(root, 'assets/agentx-certificate-sample.pdf'));
 must('certificate steps use an ordered list', html.includes('<ol class="certificate-flow"'));
-must('certificate SVG has accessible sample labeling', certificateSvg.includes('<title') && certificateSvg.includes('<desc') && certificateSvg.includes('SAMPLE • NOT VALID'));
+must('certificate SVG has accessible sample labeling', certificateSvg.includes('<title') && certificateSvg.includes('<desc') && certificateSvg.includes('SAMPLE') && certificateSvg.includes('NOT VALID'));
+must('certificate uses the university-style antique gold palette', certificateSvg.toLowerCase().includes('#a88745'));
+must('certificate uses a classical Georgia serif hierarchy', certificateSvg.includes('Georgia'));
+must('certificate is unmistakably marked sample and not valid', certificateSvg.includes('SAMPLE') && certificateSvg.includes('NOT VALID'));
+must('certificate asset cache version is consistent', [...html.matchAll(/assets\/agentx-certificate-sample\.(?:svg|pdf)([^"']*)/g)].every((match) => match[1] === '?v=20260826u'));
+must('certificate preview explains full-size access', html.includes('View full size') && html.includes('Tap or click the certificate to open'));
 must('certificate PDF has a valid header and content', certificatePdf.subarray(0, 5).toString() === '%PDF-' && certificatePdf.length > 10000);
 must('certificate stacks before intermediate-width clipping', /@media \(max-width: 1199px\)[\s\S]*?\.certificate-showcase \{ grid-template-columns: 1fr;/.test(css));
 

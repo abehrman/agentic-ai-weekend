@@ -1,66 +1,84 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="11in" height="8.5in" viewBox="0 0 1400 1082" role="img" aria-labelledby="certificateTitle certificateDesc">
-  <title id="certificateTitle">Sample AgentX AI Course Certificate of Completion for John Doe</title>
-  <desc id="certificateDesc">A landscape certificate marked Sample, Not Valid. It records completion of the Agentic AI Intensive, October 5 through 27, 2026. The program comprises nine live sessions totaling 22.5 instructional hours. The demo credential ID is AX-2026-DEMO.</desc>
+  <title id="certificateTitle">Sample university-style AgentX AI Course Certificate of Completion for John Doe</title>
+  <desc id="certificateDesc">A formal ivory landscape certificate marked Sample, Not Valid. AgentX AI Course recognizes John Doe for completing the Agentic AI Intensive. The program comprises nine live sessions totaling 22.5 instructional hours from October 5 through 27, 2026. The demo credential ID is AX-2026-DEMO.</desc>
   <defs>
-    <pattern id="grid" width="42" height="42" patternUnits="userSpaceOnUse">
-      <path d="M42 0H0V42" fill="none" stroke="#101010" stroke-opacity=".045" stroke-width="1"/>
+    <pattern id="paper" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="5" r=".7" fill="#172133" opacity=".035"/>
+      <circle cx="17" cy="18" r=".55" fill="#a88745" opacity=".055"/>
     </pattern>
-    <linearGradient id="fade" x1="0" x2="1">
-      <stop offset="0" stop-color="#2b22fa" stop-opacity=".13"/>
-      <stop offset="1" stop-color="#2b22fa" stop-opacity="0"/>
-    </linearGradient>
+    <path id="sealTop" d="M642 900a58 58 0 0 1 116 0"/>
+    <path id="sealBottom" d="M758 910a58 58 0 0 1-116 0"/>
   </defs>
 
-  <rect width="1400" height="1082" fill="#ffffff"/>
-  <rect x="34" y="34" width="1332" height="1014" fill="none" stroke="#101010" stroke-width="2"/>
-  <rect x="58" y="58" width="1284" height="966" fill="url(#grid)" stroke="#dcdcd5" stroke-width="1"/>
-  <rect x="58" y="58" width="14" height="966" fill="#2b22fa"/>
-  <rect x="72" y="58" width="560" height="966" fill="url(#fade)"/>
+  <rect width="1400" height="1082" fill="#fbf8ef"/>
+  <rect width="1400" height="1082" fill="url(#paper)"/>
+  <rect x="28" y="28" width="1344" height="1026" fill="none" stroke="#172133" stroke-width="5"/>
+  <rect x="45" y="45" width="1310" height="992" fill="none" stroke="#a88745" stroke-width="2"/>
+  <rect x="61" y="61" width="1278" height="960" fill="none" stroke="#172133" stroke-width="1"/>
 
-  <g font-family="Arial, Helvetica, sans-serif" fill="#101010">
-    <rect x="108" y="102" width="16" height="16" fill="#2b22fa"/>
-    <text x="140" y="118" font-size="24" font-weight="700" letter-spacing="-1">Agent<tspan fill="#2b22fa">X</tspan> AI Course</text>
-    <text x="1290" y="116" text-anchor="end" font-family="Consolas, monospace" font-size="13" font-weight="700" letter-spacing="1.8">SAMPLE • NOT VALID</text>
-    <line x1="108" y1="154" x2="1292" y2="154" stroke="#101010" stroke-width="1"/>
-
-    <text x="108" y="242" font-family="Consolas, monospace" font-size="16" font-weight="700" letter-spacing="2.5">CERTIFICATE OF COMPLETION</text>
-    <text x="108" y="310" font-size="24" fill="#696969">Presented to</text>
-    <text x="108" y="433" font-family="Arial Narrow, Arial, Helvetica, sans-serif" font-size="112" font-weight="800" letter-spacing="-5">JOHN DOE</text>
-    <line x1="108" y1="466" x2="1020" y2="466" stroke="#101010" stroke-width="2"/>
-
-    <text x="108" y="530" font-size="22" fill="#696969">for completing the</text>
-    <text x="108" y="604" font-family="Arial Narrow, Arial, Helvetica, sans-serif" font-size="57" font-weight="800" letter-spacing="-2.3">Agentic AI Intensive</text>
-    <text x="108" y="652" font-family="Consolas, monospace" font-size="15" font-weight="700" letter-spacing="1.1" fill="#2b22fa">PROGRAM FORMAT  /  NINE LIVE SESSIONS  /  22.5 INSTRUCTIONAL HOURS  /  OCTOBER 5–27, 2026</text>
-
-    <text x="108" y="718" font-size="19" fill="#4f4f4f">Practical foundations in large language models, agents, agentic systems, tools,</text>
-    <text x="108" y="746" font-size="19" fill="#4f4f4f">memory, verification, and human-approved workflows.</text>
-
-    <g transform="translate(1112 246)">
-      <rect x="0" y="0" width="136" height="136" fill="#101010"/>
-      <text x="68" y="88" text-anchor="middle" font-family="Arial Narrow, Arial, sans-serif" font-size="62" font-weight="800" letter-spacing="-5" fill="#ffffff">AX</text>
-      <rect x="16" y="16" width="18" height="18" fill="#2b22fa"/>
-      <circle cx="119" cy="17" r="4" fill="#2b22fa"/>
-      <circle cx="119" cy="34" r="4" fill="#ffffff" fill-opacity=".7"/>
-      <circle cx="119" cy="51" r="4" fill="#ffffff" fill-opacity=".35"/>
-    </g>
-
-    <g opacity=".055" transform="translate(585 550) rotate(-12)">
-      <text x="0" y="0" font-family="Arial Narrow, Arial, sans-serif" font-size="148" font-weight="800" letter-spacing="7" fill="#2b22fa">SAMPLE</text>
-    </g>
-
-    <line x1="108" y1="820" x2="1292" y2="820" stroke="#101010" stroke-width="1"/>
-    <text x="108" y="862" font-family="Consolas, monospace" font-size="11" font-weight="700" letter-spacing="1.3" fill="#696969">ISSUED</text>
-    <text x="108" y="891" font-size="17" font-weight="700">October 27, 2026 · Tenafly, New Jersey</text>
-
-    <text x="563" y="862" font-family="Consolas, monospace" font-size="11" font-weight="700" letter-spacing="1.3" fill="#696969">CREDENTIAL ID</text>
-    <text x="563" y="891" font-family="Consolas, monospace" font-size="17" font-weight="700">AX-2026-DEMO</text>
-
-    <line x1="976" y1="900" x2="1292" y2="900" stroke="#101010" stroke-width="1"/>
-    <text x="976" y="928" font-size="16" font-weight="700">Adam Behrman</text>
-    <text x="1292" y="928" text-anchor="end" font-size="14" fill="#696969">Instructor &amp; Issuer</text>
-
-    <rect x="108" y="963" width="1184" height="2" fill="#2b22fa"/>
-    <text x="108" y="997" font-family="Consolas, monospace" font-size="12" font-weight="700" letter-spacing="1.1">AGENTXAICOURSE.COM</text>
-    <text x="1292" y="997" text-anchor="end" font-family="Consolas, monospace" font-size="12" font-weight="700" letter-spacing="1.1">ISSUED BY AGENTX AI COURSE</text>
+  <g fill="none" stroke="#a88745" stroke-width="2">
+    <path d="M61 142V61h81M1258 61h81v81M61 940v81h81M1258 1021h81v-81"/>
+    <path d="M78 126V78h48M1274 78h48v48M78 956v48h48M1274 1004h48v-48" opacity=".7"/>
   </g>
+  <g fill="#a88745">
+    <rect x="128" y="56" width="10" height="10" transform="rotate(45 133 61)"/>
+    <rect x="1262" y="56" width="10" height="10" transform="rotate(45 1267 61)"/>
+    <rect x="128" y="1016" width="10" height="10" transform="rotate(45 133 1021)"/>
+    <rect x="1262" y="1016" width="10" height="10" transform="rotate(45 1267 1021)"/>
+  </g>
+
+  <g text-anchor="middle" fill="#172133">
+    <text x="700" y="128" font-family="Georgia, 'Times New Roman', serif" font-size="24" font-weight="700" letter-spacing="5">AGENTX AI COURSE</text>
+    <text x="700" y="158" font-family="Arial, Helvetica, sans-serif" font-size="11" letter-spacing="3" fill="#625f56">INDEPENDENT EDUCATION · TENAFLY, NEW JERSEY</text>
+    <line x1="478" y1="184" x2="676" y2="184" stroke="#a88745"/>
+    <rect x="695" y="179" width="10" height="10" fill="#2b22fa" transform="rotate(45 700 184)"/>
+    <line x1="724" y1="184" x2="922" y2="184" stroke="#a88745"/>
+
+    <text x="700" y="278" font-family="Georgia, 'Times New Roman', serif" font-size="54" letter-spacing="9">CERTIFICATE</text>
+    <text x="700" y="326" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" letter-spacing="7" fill="#a88745">OF COMPLETION</text>
+    <text x="700" y="395" font-family="Georgia, 'Times New Roman', serif" font-size="19" font-style="italic" fill="#625f56">This certifies that</text>
+
+    <g opacity=".055" transform="translate(700 575)">
+      <text x="0" y="0" font-family="Georgia, 'Times New Roman', serif" font-size="148" font-weight="700" letter-spacing="14" fill="#a88745">SAMPLE</text>
+    </g>
+
+    <text x="700" y="502" font-family="Georgia, 'Times New Roman', serif" font-size="83" font-style="italic">John Doe</text>
+    <line x1="348" y1="531" x2="1052" y2="531" stroke="#a88745" stroke-width="1.5"/>
+    <text x="700" y="582" font-family="Georgia, 'Times New Roman', serif" font-size="20" fill="#625f56">has successfully completed the</text>
+    <text x="700" y="650" font-family="Georgia, 'Times New Roman', serif" font-size="43" font-weight="700">Agentic AI Intensive</text>
+    <text x="700" y="704" font-family="Georgia, 'Times New Roman', serif" font-size="18" fill="#45443f">an in-person program in practical agentic AI, large language models, agents, tools,</text>
+    <text x="700" y="733" font-family="Georgia, 'Times New Roman', serif" font-size="18" fill="#45443f">memory, verification, and human-approved workflows.</text>
+    <text x="700" y="786" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700" letter-spacing="2.2" fill="#a88745">OCTOBER 5–27, 2026 · NINE LIVE SESSIONS · 22.5 INSTRUCTIONAL HOURS</text>
+  </g>
+
+  <line x1="120" y1="826" x2="1280" y2="826" stroke="#a88745" stroke-width="1"/>
+
+  <g fill="#172133">
+    <line x1="160" y1="907" x2="486" y2="907" stroke="#172133"/>
+    <text x="323" y="935" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="17" font-weight="700">Adam Behrman</text>
+    <text x="323" y="960" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="10" letter-spacing="1.5" fill="#625f56">INSTRUCTOR &amp; ISSUER</text>
+
+    <line x1="914" y1="907" x2="1240" y2="907" stroke="#172133"/>
+    <text x="1077" y="935" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="17" font-weight="700">October 27, 2026</text>
+    <text x="1077" y="960" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="10" letter-spacing="1.5" fill="#625f56">DATE OF COMPLETION</text>
+  </g>
+
+  <g fill="#fbf8ef" stroke="#a88745">
+    <circle cx="700" cy="906" r="74" stroke-width="2.5"/>
+    <circle cx="700" cy="906" r="62" stroke-width="1"/>
+    <circle cx="700" cy="906" r="45" fill="#172133" stroke-width="2"/>
+  </g>
+  <g fill="#a88745" font-family="Arial, Helvetica, sans-serif" font-size="10" font-weight="700" letter-spacing="1.6">
+    <text><textPath href="#sealTop" startOffset="50%" text-anchor="middle">AGENTX AI COURSE</textPath></text>
+    <text><textPath href="#sealBottom" startOffset="50%" text-anchor="middle">COMPLETION · 2026</textPath></text>
+  </g>
+  <text x="700" y="922" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="43" font-weight="700" fill="#fbf8ef">AX</text>
+  <rect x="695" y="938" width="10" height="10" fill="#2b22fa" transform="rotate(45 700 943)"/>
+
+  <g font-family="Arial, Helvetica, sans-serif" font-size="10" font-weight="700" letter-spacing="1.4">
+    <text x="120" y="1001" fill="#625f56">AGENTXAICOURSE.COM</text>
+    <text x="700" y="1001" text-anchor="middle" fill="#172133">CREDENTIAL ID · AX-2026-DEMO</text>
+    <text x="1280" y="1001" text-anchor="end" fill="#625f56">ISSUED INDEPENDENTLY BY AGENTX AI COURSE</text>
+  </g>
+  <text x="1280" y="111" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="700" letter-spacing="1.7" fill="#a88745">SAMPLE · NOT VALID</text>
 </svg>
