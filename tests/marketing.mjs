@@ -55,7 +55,7 @@ for (const capability of [
   'documents', 'photos',
 ]) must('capability: ' + capability, html.toLowerCase().includes(capability));
 
-for (const section of ['possibilities', 'method', 'fundamentals', 'program', 'instructor', 'enroll', 'faq']) {
+for (const section of ['possibilities', 'method', 'fundamentals', 'program', 'certificate', 'instructor', 'enroll', 'faq']) {
   must('section #' + section, new RegExp(`id=["']${section}["']`).test(html));
 }
 
@@ -119,6 +119,20 @@ must('Windows compatibility', [html, register, terms].every((page) => /Windows 1
 must('Intel Mac exclusion is explained', html.includes('Macs showing an Intel processor are not supported'));
 must('Alvarez & Marsal credential is specific', html.includes('Advisor to Tier 1 banks, private equity firms, and fintechs at Alvarez &amp; Marsal'));
 must('generic advisor credential removed', !html.includes('Advisor to major global financial institutions and senior executives'));
+must('hourly price comparisons removed', !/per live hour/i.test(publicCopy));
+for (const certificateFact of [
+  'Certificate of Completion', 'AgentX AI Course', 'John Doe', 'AX-2026-DEMO',
+  'does not confer academic credit', 'not a professional certification',
+]) must('certificate fact: ' + certificateFact, html.includes(certificateFact));
+for (const certificateAsset of [
+  'assets/agentx-certificate-sample.svg', 'assets/agentx-certificate-sample.pdf',
+]) must('certificate asset: ' + certificateAsset, html.includes(certificateAsset) && existsSync(join(root, certificateAsset)));
+const certificateSvg = read('assets/agentx-certificate-sample.svg');
+const certificatePdf = readFileSync(join(root, 'assets/agentx-certificate-sample.pdf'));
+must('certificate steps use an ordered list', html.includes('<ol class="certificate-flow"'));
+must('certificate SVG has accessible sample labeling', certificateSvg.includes('<title') && certificateSvg.includes('<desc') && certificateSvg.includes('SAMPLE • NOT VALID'));
+must('certificate PDF has a valid header and content', certificatePdf.subarray(0, 5).toString() === '%PDF-' && certificatePdf.length > 10000);
+must('certificate stacks before intermediate-width clipping', /@media \(max-width: 1199px\)[\s\S]*?\.certificate-showcase \{ grid-template-columns: 1fr;/.test(css));
 
 console.log('');
 if (failures) {
