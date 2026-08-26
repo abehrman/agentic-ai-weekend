@@ -32,12 +32,14 @@ permit 60 completed sessions.
   - Required individual name and Stripe terms consent
   - Redirect to `/welcome/` with the Checkout Session ID
   - Automatic tax off, promotion codes off, quantity fixed at one
-- No live Checkout Sessions exist.
+- One unpaid Checkout Session opened during launch QA is still open. It does not
+  count toward the 20 completed-session limit and will expire automatically.
 - No webhook endpoints exist.
 - No Stripe Tax registrations exist. Do not enable automatic tax until the
   business confirms it has a registration in every jurisdiction where it must
   collect.
-- Stripe Checkout branding assets are unset.
+- The product image and `AGENTX COURSE` product statement descriptor are set.
+  Account-level Checkout logo and icon assets remain unset.
 - The public support email and support URL are unset.
 - The account statement descriptor is `AGENTX`.
 - Three active one-time USD prices exist on one active product:
@@ -52,9 +54,10 @@ The amounts and metadata dates now match the site.
 
 ### Site and Firebase
 
-- The working tree wires `register/index.html` to the live Payment Link and
-  removes the email fallback from the primary action.
-- The working tree adds no-store rules for `/register/**` and `/welcome/**`.
+- Production `register/index.html` opens the live Payment Link and has no email
+  fallback in the primary action.
+- Production `/register/**` and `/welcome/**` return
+  `Cache-Control: private, no-store, max-age=0`.
 - `welcome/index.html` is a public, static page. It must not be treated as proof
   of payment or as an entitlement gate.
 - The site has no backend dependencies or root `package.json`.
@@ -63,10 +66,10 @@ The amounts and metadata dates now match the site.
 - Google Cloud billing is disabled.
 - Firestore, Cloud Functions, Cloud Run, Cloud Build, Secret Manager, Eventarc,
   and Artifact Registry are not enabled.
-- The last live `/register/` response checked returned
-  `Cache-Control: max-age=3600`. The
-  `**/*.html` Firebase rule does not match this extensionless public route. A
-  cached enrollment page can retain an old checkout link for an hour.
+- The custom domain serves the live checkout URL, current script cache version,
+  CSP, HSTS, `X-Frame-Options: DENY`, and the intended enrollment cache policy.
+- Private repository material under `/launch/` and `/docs/` is excluded from
+  Firebase Hosting and returns 404 on the public domain.
 
 ## Live checkout configuration
 
@@ -114,13 +117,16 @@ The static readiness check is useful UX, but it is not retained. The required
 name is retained by Stripe; a device field would make preflight easier but is
 not a payment-launch blocker.
 
-### Remaining site launch work
+### Completed site launch verification
 
-- Deploy Firebase Hosting, then verify the live custom-domain registration page
-  contains the Stripe URL and that `/register/` and `/welcome/` return the
-  intended no-store cache policy.
-- Inspect live Checkout without submitting payment: AgentX account, $1,950,
-  one seat, required name and terms, and the expected return details.
+- Firebase Hosting is deployed and the custom-domain registration page opens
+  the live Stripe URL.
+- `/register/` and `/welcome/` return the intended private no-store policy.
+- Live Checkout shows AgentX, $1,950, one seat, required name and terms, and the
+  expected return details.
+- A complete test-mode card payment verified the redirect, paid status, name,
+  terms consent, UTM retention, statement suffix, and automatic link closure at
+  its test capacity of one.
 
 The local JavaScript syntax check, full dependency-free test suite, and
 `git diff --check` all pass. Tests now cover the live Stripe URL, no-store
@@ -252,13 +258,14 @@ the cohort.
 
 ### Site
 
-- [ ] The deployed registration primary action opens the live Stripe-hosted
-      domain. The working tree is wired; production still needs verification.
+- [x] The deployed registration primary action opens the live Stripe-hosted
+      domain.
 - [x] The current site price and Stripe amount match.
 - [x] The button cannot be activated until readiness and terms are checked.
-- [ ] `/register/` and `/welcome/` return `Cache-Control: no-store`.
+- [x] `/register/` and `/welcome/` return `Cache-Control: private, no-store,
+      max-age=0`.
 - [x] No secret key, webhook secret, or test link is shipped.
-- [ ] Mobile and desktop registration have no overflow or clipped controls.
+- [x] Mobile and desktop registration have no overflow or clipped controls.
 - [x] The public welcome page grants no private access.
 
 ### Capacity and failure tests
