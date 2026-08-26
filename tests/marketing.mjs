@@ -117,6 +117,8 @@ must('no technical Mac chip-family label', !/Apple\s+Silicon/i.test(publicCopy))
 must('plain Mac compatibility', html.includes('M1, M2, M3, M4, or newer M-series') && html.includes('About This Mac'));
 must('Windows compatibility', [html, register, terms].every((page) => /Windows 10\/11/.test(page)));
 must('Intel Mac exclusion is explained', html.includes('Macs showing an Intel processor are not supported'));
+must('Alvarez & Marsal credential is specific', html.includes('Advisor to Tier 1 banks, private equity firms, and fintechs at Alvarez &amp; Marsal'));
+must('generic advisor credential removed', !html.includes('Advisor to major global financial institutions and senior executives'));
 
 console.log('');
 if (failures) {
