@@ -1,6 +1,6 @@
 # AgentX 14-day launch calendar
 
-The core launch runs from Thursday, August 27 through Wednesday, September 9. The $1,950 launch rate remains available through September 13.
+The core launch runs from Thursday, August 27 through Wednesday, September 9. The $995 launch rate remains available through September 13.
 
 | Day | Date | Publish | Direct action | Record |
 |---|---|---|---|---|
@@ -10,7 +10,7 @@ The core launch runs from Thursday, August 27 through Wednesday, September 9. Th
 | 4 | Sun, Aug 30 | Email 1: personal-assistant use cases | Send the community note to two local organizations | Course-page visits and enrollments |
 | 5 | Mon, Aug 31 | Nextdoor post | Contact two libraries or adult-learning programs | Responses and requested materials |
 | 6 | Tue, Sep 1 | LinkedIn follow-up 1: agentic fundamentals | Send five individual notes to former colleagues or alumni contacts | Qualified conversations |
-| 7 | Wed, Sep 2 | No new public post | Send the press note to selected Tenafly or Bergen County editors | Opens, replies, interview requests |
+| 7 | Wed, Sep 2 | No new public post | Send the press note to selected Bergen County and regional education editors | Opens, replies, interview requests |
 | 8 | Thu, Sep 3 | Certificate image with a short course-outcomes caption | Follow up once with interested people who asked a question | Enrollment decisions and blockers |
 | 9 | Fri, Sep 4 | Email 2: chatbot, agent, and agentic system | Offer one 15-minute live online course preview at a fixed published time | Registrations and attendance |
 | 10 | Sat, Sep 5 | Short Instagram story: four everyday use cases | Answer questions; do not add another sales message | Repeated questions for FAQ updates |
@@ -21,7 +21,7 @@ The core launch runs from Thursday, August 27 through Wednesday, September 9. Th
 
 ## Deadline follow-through
 
-- **Saturday, September 12:** Post one factual reminder that $1,950 tuition ends September 13. Include the October dates and enrollment link.
+- **Saturday, September 12:** Post one factual reminder that $995 tuition ends September 13. Include the October dates and enrollment link.
 - **Sunday, September 13:** Send one final reminder to people who opted in or directly expressed interest. State the deadline and next price. Do not claim that seats are almost gone unless the live enrollment count proves it.
 
 ## Daily operating rhythm

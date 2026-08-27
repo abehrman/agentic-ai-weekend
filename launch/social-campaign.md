@@ -8,16 +8,16 @@ Most people still use AI one question at a time.
 
 Ask. Answer. Start over.
 
-I built the Agentic AI Intensive to teach a more useful way to work: direct a personal agent that can research, organize, plan, remember approved context, and help move real work forward—with you in control.
+I built the Agentic AI Intensive to teach AI beyond ChatGPT: choose the right model, then direct portable personal agents that can research, organize, plan, remember approved context, and move real work—with you in control.
 
 Over nine live sessions, we will cover the practical fundamentals:
 
-- What an LLM does
+- What an LLM does—and why different models answer differently
 - How an agent plans, acts, checks, and adjusts
 - How tools, memory, evidence, permissions, and human approval create an agentic system
 - How to verify results and recover when something misses
 
-Then every learner will build a working personal assistant around one real goal.
+Then every learner will build three working assistants and one source-grounded second-brain around a real goal.
 
 That goal might be launching a business, organizing finances, comparing a car purchase, planning travel, researching doctors and medical choices, finding discounts, or putting years of documents and photos in order.
 
@@ -25,12 +25,12 @@ For medical, financial, and other high-impact choices, the system supports resea
 
 No coding experience is required. The course is designed for ambitious beginners across generations.
 
-**October 5–27, 2026**  
-Nine evenings · 6:30–9:00 PM  
-In person · Tenafly, New Jersey  
-Maximum 20 participants
+**October 5–27, 2026**
+Nine evenings · 6:30–9:00 PM ET
+Live online via Zoom
+High-touch cohort · Maximum 20 participants
 
-Launch tuition is $1,950 through September 13. Learners who complete the course receive a named AgentX Certificate of Completion.
+Launch tuition is $995 through September 13. No paid AI subscription is required. Learners who complete the course receive a named AgentX Certificate of Completion.
 
 Course details and enrollment:  
 https://agentxaicourse.com/?utm_source=linkedin&utm_medium=organic_social&utm_campaign=agentx_oct2026_launch&utm_content=launch_announcement
@@ -45,7 +45,7 @@ A chatbot answers.
 
 An agent works toward a goal.
 
-That difference sounds small until you see the full loop:
+That difference becomes clear when you see the full loop:
 
 **Plan → act → check → adjust.**
 
@@ -80,7 +80,7 @@ The common skill is learning how to give an agent a clear goal, useful context, 
 
 That is how a personal assistant becomes a second-brain—not by replacing your judgment, but by extending your reach.
 
-The Agentic AI Intensive meets in Tenafly from October 5–27. The cohort is capped at 20 participants.
+The Agentic AI Intensive meets live online from October 5–27. The high-touch cohort is capped at 20 participants.
 
 https://agentxaicourse.com/?utm_source=linkedin&utm_medium=organic_social&utm_campaign=agentx_oct2026_launch&utm_content=everyday_use_cases
 
@@ -92,21 +92,21 @@ https://agentxaicourse.com/?utm_source=linkedin&utm_medium=organic_social&utm_ca
 
 **Build your second-brain. Work with superhuman reach.**
 
-AgentX AI Course is bringing a live, beginner-friendly Agentic AI Intensive to Tenafly this October.
+AgentX AI Course is bringing a live online, beginner-friendly Agentic AI Intensive to Zoom this October.
 
-In nine sessions, learn LLM, agent, and agentic-system fundamentals—then build a personal assistant that can help you research, organize, plan, remember approved context, and move real work forward.
+In nine sessions, learn AI beyond ChatGPT, compare leading and open models, and build three assistants plus a source-grounded second-brain.
 
 Use it for a business idea, a budget, a car search, travel, doctor research, discounts, documents, photos, or the project you keep postponing.
 
 It supports research and planning, not medical or financial advice.
 
-No coding required. Maximum 20 participants. Certificate of Completion included.
+No coding or paid AI subscription required. High-touch cohort, maximum 20. Certificate of Completion included.
 
-October 5–27 · 6:30–9:00 PM  
-Launch tuition: $1,950 through September 13  
+October 5–27 · 6:30–9:00 PM ET · Zoom
+Launch tuition: $995 through September 13
 Details at the link in bio.
 
-#AgentXAI #AgenticAI #AIClass #Tenafly #BergenCounty
+#AgentXAI #AgenticAI #AIClass #OnlineLearning #AIBeyondChatGPT
 
 **Bio link:** https://agentxaicourse.com/?utm_source=instagram&utm_medium=organic_social&utm_campaign=agentx_oct2026_launch&utm_content=launch_caption
 
@@ -114,17 +114,17 @@ Details at the link in bio.
 
 ## Nextdoor
 
-**New in-person AI course in Tenafly this October**
+**A live online AI course built locally for real life**
 
-A small, beginner-friendly Agentic AI Intensive is opening in Tenafly from October 5–27.
+A high-touch, beginner-friendly Agentic AI Intensive is meeting live online from October 5–27.
 
 Across nine evening sessions, participants will learn how LLMs, agents, memory, tools, evidence, and human approval work. Each person will build a personal assistant around a real goal—such as organizing family documents, researching a major purchase, planning travel, developing a business idea, or preparing better questions for a doctor or financial professional.
 
-No coding experience is required. The cohort is limited to 20 participants and includes guided setup, course materials, and an AgentX Certificate of Completion.
+No coding experience or paid AI subscription is required. The cohort is capped at 20 and includes four breakout studios of five, guided setup, recordings, course materials, and an AgentX Certificate of Completion.
 
-Launch tuition is $1,950 through September 13.
+Launch tuition is $995 through September 13.
 
-Details: https://agentxaicourse.com/?utm_source=nextdoor&utm_medium=organic_social&utm_campaign=agentx_oct2026_launch&utm_content=tenafly_community
+Details: https://agentxaicourse.com/?utm_source=nextdoor&utm_medium=organic_social&utm_campaign=agentx_oct2026_launch&utm_content=bergen_community
 
 Questions: adam.behrman@gmail.com
 
@@ -132,15 +132,15 @@ Questions: adam.behrman@gmail.com
 
 ## Facebook
 
-I’m opening enrollment for the October cohort of AgentX AI Course in Tenafly.
+I’m opening enrollment for the live online October cohort of AgentX AI Course.
 
-The Agentic AI Intensive is for people who want to move beyond one-off chatbot questions and build a personal assistant they can direct, check, and control.
+The Agentic AI Intensive is for people who want to learn AI beyond ChatGPT and build a portable team of personal assistants they can direct, check, and control.
 
 We will cover LLM, agent, and agentic fundamentals, then apply them to everyday work: entrepreneurship, planning, financial organization, major purchases, travel, important research, and organizing documents and photos.
 
-It is live, in person, and built for beginners. No coding experience is required.
+It is live on Zoom and built for beginners. No coding experience or paid AI subscription is required.
 
-October 5–27 · nine evenings · maximum 20 participants. Launch tuition is $1,950 through September 13. A personalized AgentX Certificate of Completion is included.
+October 5–27 · nine evenings · 6:30–9:00 PM ET · maximum 20 participants. Launch tuition is $995 through September 13. A personalized AgentX Certificate of Completion is included.
 
 See the full course: https://agentxaicourse.com/?utm_source=facebook&utm_medium=organic_social&utm_campaign=agentx_oct2026_launch&utm_content=personal_network
 
@@ -148,4 +148,4 @@ See the full course: https://agentxaicourse.com/?utm_source=facebook&utm_medium=
 
 ## Forwardable referral text message
 
-Adam Behrman is running a live Agentic AI course in Tenafly Oct 5–27. It is for beginners who want to build a practical personal assistant—a second-brain for research, planning, organization, and real-life decisions. Nine evening sessions, max 20 people, no coding required, and a Certificate of Completion. Launch tuition is $1,950 through Sep 13: https://agentxaicourse.com/?utm_source=sms&utm_medium=referral&utm_campaign=agentx_oct2026_launch&utm_content=friend_forward
+Adam Behrman is running a live online Agentic AI course Oct 5–27. Beginners learn AI beyond ChatGPT and build three assistants plus a source-grounded second-brain for research, planning, organization, and real-life decisions. Nine evening Zoom sessions, max 20, no coding or paid AI subscription required, and a Certificate of Completion. Launch tuition is $995 through Sep 13: https://agentxaicourse.com/?utm_source=sms&utm_medium=referral&utm_campaign=agentx_oct2026_launch&utm_content=friend_forward

@@ -1,7 +1,7 @@
 # AgentX AI Course — public site
 
-Public marketing and enrollment site for the October 5–27, 2026 Agentic AI
-Intensive from AgentX AI Course.
+Public marketing and enrollment site for the live-online October 5–27, 2026
+Agentic AI Intensive from AgentX AI Course.
 
 Live target: <https://agentxaicourse.com/>
 
@@ -33,8 +33,8 @@ node tests/run.mjs
 ```
 
 Before publishing, verify 375px, 414px, and 1440px layouts; internal navigation;
-reduced motion; registration; live-mode Stripe branding, amount, fields, terms,
-and redirect; console cleanliness; and no horizontal overflow.
+reduced motion; registration; live-mode Stripe branding, $995 amount, fields,
+terms, and redirect; console cleanliness; and no horizontal overflow.
 
 ## Hosting
 
@@ -51,6 +51,7 @@ The static site never handles card data. The registration page hands off to a
 Stripe-hosted Payment Link. Never place a `buy.stripe.com/test_…` URL in shipped
 HTML. Live enrollment uses Stripe-hosted Checkout through one active Payment
 Link. Stripe handles card data and closes that link at its completed-session
-limit. At each tuition boundary, deactivate the old link, expire its open
-Checkout Sessions, count cumulative completions, and create the next link with
-`20 - cumulative completions` as its limit before swapping the site URL.
+limit. The current live link is `plink_1U93F0DDFFWiezA0n7daEZKl`; its first
+price is $995. At each tuition boundary, expire open Checkout Sessions, count
+cumulative completions, replace the link price with $1,250 or $1,495, and keep
+the single cumulative completed-session limit at 20.

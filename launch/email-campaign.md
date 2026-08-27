@@ -5,7 +5,7 @@
 **Send:** Thursday, August 27  
 **Subject:** I built the AI course I wanted my friends and family to have  
 **Alternate subject:** AgentX AI Course is open for October  
-**Preheader:** Build a second-brain in nine live sessions—no coding required.
+**Preheader:** Build a second-brain in nine live online sessions—no coding or paid AI subscription required.
 
 I have spent years advising senior executives on AI, automation, risk, and transformation—and building AI assistants myself.
 
@@ -13,7 +13,7 @@ The gap I keep seeing is not access to AI. It is knowing how to make AI useful, 
 
 That is why I created the **Agentic AI Intensive** from AgentX AI Course.
 
-Across nine live, in-person sessions, you will learn the fundamentals of large language models, agents, and agentic systems. Then you will build a personal assistant that can research, organize, plan, remember approved context, and help move real work forward—with you in control.
+Across nine live online sessions, you will learn AI beyond ChatGPT: how leading and open models differ, how agents work, and how to carry a useful system across vendors. Then you will build three assistants and a source-grounded second-brain that can research, organize, plan, remember approved context, and move real work—with you in control.
 
 You might use that system to pressure-test a business idea, organize finances, compare a major purchase, plan travel, research doctors and medical choices, or finally bring order to documents and photos.
 
@@ -21,13 +21,13 @@ For high-impact choices, AI helps organize research and questions. It does not r
 
 The goal is practical: build your **second-brain** and learn to work with **superhuman reach**.
 
-**October 5–27, 2026**  
-Nine evenings, 6:30–9:00 PM  
-In person in Tenafly, New Jersey  
-Maximum 20 participants  
-No coding experience required
+**October 5–27, 2026**
+Nine evenings, 6:30–9:00 PM ET
+Live online via Zoom
+High-touch cohort · Maximum 20 participants
+No coding experience or paid AI subscription required
 
-Launch tuition is **$1,950 through September 13**. Every learner who completes the program receives a named AgentX Certificate of Completion.
+Launch tuition is **$995 through September 13**. Every learner who completes the program receives a named AgentX Certificate of Completion.
 
 [See the course and enroll](https://agentxaicourse.com/?utm_source=email&utm_medium=owned_email&utm_campaign=agentx_oct2026_launch&utm_content=announcement)
 
@@ -56,7 +56,7 @@ In the Agentic AI Intensive, you will build that system around a real part of yo
 
 The course does not replace professional judgment. It teaches you how to research better, verify claims, set boundaries, and remain the final decision-maker.
 
-Bring one real goal. Leave with a working personal assistant and a clearer way to use AI every day.
+Bring one real goal. Leave with three working assistants, a grounded research system, and a clearer way to use AI every day.
 
 [Explore what you will build](https://agentxaicourse.com/?utm_source=email&utm_medium=owned_email&utm_campaign=agentx_oct2026_launch&utm_content=use_cases)
 
@@ -80,9 +80,9 @@ In the October AgentX course, we build that model one layer at a time:
 2. An **agent** uses that LLM in a loop: plan, act, check, and adjust.
 3. An **agentic system** adds tools, memory, evidence, permissions, and human approval.
 
-Then we put the ideas to work. You will map your goal, configure a local assistant, add approved memory, connect an interface, test retrieval, verify results, and learn how to recover when something misses.
+Then we put the ideas to work. You will compare proprietary and open models, map your goal, build a portable Agent Card, create three assistants, ground research in chosen sources, verify results, and learn how to recover when something misses.
 
-No prior AI or coding experience is required. The class is live, in person, and limited to 20 participants so the setup and guidance stay hands-on.
+No prior AI or coding experience is required. The live Zoom cohort is capped at 20, with four breakout studios of five, direct feedback, a private cohort channel, and recordings.
 
 [See all nine sessions](https://agentxaicourse.com/?utm_source=email&utm_medium=owned_email&utm_campaign=agentx_oct2026_launch&utm_content=fundamentals)
 
@@ -94,22 +94,22 @@ Adam
 
 **Send:** Wednesday, September 9  
 **Subject:** AgentX launch tuition ends September 13  
-**Preheader:** The October cohort begins October 5 in Tenafly.
+**Preheader:** The live online October cohort begins October 5.
 
-The $1,950 launch tuition for the October Agentic AI Intensive is available through **September 13, 2026**.
+The $995 launch tuition for the October Agentic AI Intensive is available through **September 13, 2026**.
 
-After that date, tuition is $2,250 through September 27 and $2,500 from September 28.
+After that date, tuition is $1,250 through September 27 and $1,495 from September 28.
 
 The curriculum does not change with the price window. It includes:
 
 - Nine live sessions from October 5–27
 - Guided setup and a preflight clinic
 - LLM, agent, and agentic-system fundamentals
-- A working personal assistant with approved memory
-- A Personal Agent Map, verification method, and recovery guidance
+- Three working assistants and a source-grounded second-brain
+- A portable Agent Card, Personal Agent Map, verification method, and recovery guidance
 - A personalized AgentX Certificate of Completion
 
-The course meets in person in Tenafly, New Jersey, from 6:30–9:00 PM. The cohort is capped at 20 participants. No coding experience is required.
+The course meets live online via Zoom from 6:30–9:00 PM ET. The high-touch cohort is capped at 20 participants. No coding experience or paid AI subscription is required.
 
 [Review the cohort and enroll](https://agentxaicourse.com/register/?utm_source=email&utm_medium=owned_email&utm_campaign=agentx_oct2026_launch&utm_content=launch_rate_deadline)
 

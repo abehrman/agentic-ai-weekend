@@ -1,4 +1,11 @@
-# AgentX checkout launch audit
+# AgentX checkout launch audit — superseded record
+
+> Superseded on August 27, 2026. The sections below preserve the prior
+> in-person checkout audit for history and must not be used as current launch
+> instructions. Current live-online state: $995 / $1,250 / $1,495; product
+> `prod_V8qaPQrkLova8m`; Payment Link `plink_1U93F0DDFFWiezA0n7daEZKl`;
+> URL `https://book.stripe.com/cNifZh3ir1o0dnL4zW7IY01`; zero paid seats at
+> cutover. The retired $1,950 link is inactive.
 
 Audited August 26, 2026 against the local repository, the live Firebase site,
 Google Cloud project `agentx-ai-course`, and the live AgentX Stripe account.

@@ -104,8 +104,10 @@ if (typeof document !== 'undefined') (() => {
     const steps = [...system.querySelectorAll('.agent-steps li')];
     const canvas = system.querySelector('.agent-system__canvas');
     const progress = system.querySelector('.agent-system__progress span');
+    const motionToggle = system.querySelector('[data-agent-motion]');
     let current = 0;
     let timer = null;
+    let manuallyPaused = false;
 
     const activate = (index) => {
       current = index;
@@ -126,9 +128,22 @@ if (typeof document !== 'undefined') (() => {
 
     const start = () => {
       stop();
-      if (reducedMotion.matches || document.hidden) return;
+      if (reducedMotion.matches || document.hidden || manuallyPaused) return;
       timer = window.setInterval(() => activate((current + 1) % steps.length), 2300);
     };
+
+    const updateMotionToggle = () => {
+      if (!motionToggle) return;
+      motionToggle.setAttribute('aria-pressed', String(manuallyPaused));
+      document.documentElement.classList.toggle('is-motion-paused', manuallyPaused);
+      motionToggle.textContent = manuallyPaused ? 'Play motion' : 'Pause motion';
+    };
+
+    motionToggle?.addEventListener('click', () => {
+      manuallyPaused = !manuallyPaused;
+      updateMotionToggle();
+      manuallyPaused ? stop() : start();
+    });
 
     steps.forEach((step, index) => {
       step.tabIndex = 0;
@@ -151,6 +166,7 @@ if (typeof document !== 'undefined') (() => {
     reducedMotion.addEventListener?.('change', () => reducedMotion.matches ? stop() : start());
 
     activate(0);
+    updateMotionToggle();
     if ('IntersectionObserver' in window) {
       const observer = new IntersectionObserver(([entry]) => entry.isIntersecting ? start() : stop(), { threshold: 0.3 });
       observer.observe(system);
@@ -223,16 +239,16 @@ if (typeof document !== 'undefined') (() => {
 
     const status = document.querySelector('[data-price-status]');
     const messages = {
-      launch: 'Launch tuition of $1,950 is available through September 13.',
-      standard: 'Standard tuition is $2,250 through September 27.',
-      full: 'Full tuition is $2,500.',
+      launch: 'Launch tuition of $995 is available through September 13.',
+      standard: 'Standard tuition is $1,250 through September 27.',
+      full: 'Full tuition is $1,495.',
     };
     if (status) status.textContent = messages[windowName];
 
     const current = {
-      launch: { price: '$1,950', fact: '$1,950 through September 13', deadline: 'Launch rate through September 13, 2026' },
-      standard: { price: '$2,250', fact: '$2,250 through September 27', deadline: 'Standard rate through September 27, 2026' },
-      full: { price: '$2,500', fact: '$2,500 from September 28', deadline: 'Full tuition from September 28, 2026' },
+      launch: { price: '$995', fact: '$995 through September 13', deadline: 'Launch rate through September 13, 2026' },
+      standard: { price: '$1,250', fact: '$1,250 through September 27', deadline: 'Standard rate through September 27, 2026' },
+      full: { price: '$1,495', fact: '$1,495 from September 28', deadline: 'Full tuition from September 28, 2026' },
     }[windowName];
     document.querySelectorAll('[data-current-price]').forEach((node) => { node.textContent = current.price; });
     document.querySelectorAll('[data-current-fact]').forEach((node) => { node.textContent = current.fact; });
@@ -246,10 +262,11 @@ if (typeof document !== 'undefined') (() => {
 
     if (checkoutUrl) {
       const campaign = campaignParams();
-      links.forEach((link) => {
-        link.href = withCampaign(checkoutUrl, campaign);
-        link.dataset.checkoutReady = 'true';
-        if (link.dataset.liveLabel) link.textContent = link.dataset.liveLabel;
+      links.forEach((control) => {
+        const destination = withCampaign(checkoutUrl, campaign);
+        if (control instanceof HTMLAnchorElement) control.href = destination;
+        else control.dataset.checkoutDestination = destination;
+        control.dataset.checkoutReady = 'true';
       });
     }
   }
@@ -258,19 +275,21 @@ if (typeof document !== 'undefined') (() => {
     const form = document.querySelector('[data-readiness-form]');
     if (!form) return;
     const checks = [...form.querySelectorAll('input[type="checkbox"][required]')];
-    const link = form.querySelector('[data-checkout-link]');
-    if (!checks.length || !link) return;
+    const control = form.querySelector('[data-checkout-link]');
+    if (!checks.length || !control) return;
 
     const update = () => {
       const ready = checks.every((check) => check.checked);
-      link.classList.toggle('is-disabled', !ready);
-      if (ready) link.removeAttribute('aria-disabled');
-      else link.setAttribute('aria-disabled', 'true');
+      control.classList.toggle('is-pending', !ready);
+      control.textContent = ready ? control.dataset.liveLabel : 'Complete the checks to continue';
     };
 
     checks.forEach((check) => check.addEventListener('change', update));
-    link.addEventListener('click', (event) => {
-      if (!checks.every((check) => check.checked)) event.preventDefault();
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+      if (!form.reportValidity()) return;
+      const destination = control.dataset.checkoutDestination || form.action;
+      window.location.assign(destination);
     });
     update();
   }

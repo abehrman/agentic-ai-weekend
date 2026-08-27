@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="11in" height="8.5in" viewBox="0 0 1400 1082" role="img" aria-labelledby="certificateTitle certificateDesc">
   <title id="certificateTitle">Sample university-style AgentX AI Course Certificate of Completion for John Doe</title>
-  <desc id="certificateDesc">A formal ivory landscape certificate marked Sample, Not Valid. AgentX AI Course recognizes John Doe for completing the Agentic AI Intensive. The program comprises nine live sessions totaling 22.5 instructional hours from October 5 through 27, 2026. The demo credential ID is AX-2026-DEMO.</desc>
+  <desc id="certificateDesc">A formal ivory landscape certificate marked Sample, Not Valid. AgentX AI Course recognizes John Doe for completing the live online Agentic AI Intensive from October 5 through 27, 2026. The demo credential ID is AX-2026-DEMO.</desc>
   <defs>
     <pattern id="paper" width="24" height="24" patternUnits="userSpaceOnUse">
       <circle cx="3" cy="5" r=".7" fill="#172133" opacity=".035"/>
@@ -29,7 +29,7 @@
 
   <g text-anchor="middle" fill="#172133">
     <text x="700" y="128" font-family="Georgia, 'Times New Roman', serif" font-size="24" font-weight="700" letter-spacing="5">AGENTX AI COURSE</text>
-    <text x="700" y="158" font-family="Arial, Helvetica, sans-serif" font-size="11" letter-spacing="3" fill="#625f56">INDEPENDENT EDUCATION · TENAFLY, NEW JERSEY</text>
+    <text x="700" y="158" font-family="Arial, Helvetica, sans-serif" font-size="11" letter-spacing="3" fill="#625f56">INDEPENDENT EDUCATION · LIVE ONLINE</text>
     <line x1="478" y1="184" x2="676" y2="184" stroke="#a88745"/>
     <rect x="695" y="179" width="10" height="10" fill="#2b22fa" transform="rotate(45 700 184)"/>
     <line x1="724" y1="184" x2="922" y2="184" stroke="#a88745"/>
@@ -46,9 +46,9 @@
     <line x1="348" y1="531" x2="1052" y2="531" stroke="#a88745" stroke-width="1.5"/>
     <text x="700" y="582" font-family="Georgia, 'Times New Roman', serif" font-size="20" fill="#625f56">has successfully completed the</text>
     <text x="700" y="650" font-family="Georgia, 'Times New Roman', serif" font-size="43" font-weight="700">Agentic AI Intensive</text>
-    <text x="700" y="704" font-family="Georgia, 'Times New Roman', serif" font-size="18" fill="#45443f">an in-person program in practical agentic AI, large language models, agents, tools,</text>
-    <text x="700" y="733" font-family="Georgia, 'Times New Roman', serif" font-size="18" fill="#45443f">memory, verification, and human-approved workflows.</text>
-    <text x="700" y="786" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700" letter-spacing="2.2" fill="#a88745">OCTOBER 5–27, 2026 · NINE LIVE SESSIONS · 22.5 INSTRUCTIONAL HOURS</text>
+    <text x="700" y="704" font-family="Georgia, 'Times New Roman', serif" font-size="18" fill="#45443f">a live online program in practical agentic AI, model choice, agents, tools,</text>
+    <text x="700" y="733" font-family="Georgia, 'Times New Roman', serif" font-size="18" fill="#45443f">source-grounded research, verification, and human-approved workflows.</text>
+    <text x="700" y="786" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700" letter-spacing="2.2" fill="#a88745">OCTOBER 5–27, 2026 · NINE LIVE ONLINE SESSIONS</text>
   </g>
 
   <line x1="120" y1="826" x2="1280" y2="826" stroke="#a88745" stroke-width="1"/>

@@ -5,14 +5,16 @@ Use this before publishing, sending, or approving any marketing asset.
 ## Approved course facts
 
 - AgentX AI Course offers the Agentic AI Intensive from October 5–27, 2026.
-- The course has nine in-person sessions from 6:30–9:00 PM in Tenafly, New Jersey.
+- The course has nine live online Zoom sessions from 6:30–9:00 PM ET.
 - Enrollment is capped at 20 participants.
-- Launch tuition is $1,950 through September 13.
-- Standard tuition is $2,250 from September 14–27.
-- Full tuition is $2,500 from September 28.
+- Launch tuition is $995 through September 13.
+- Standard tuition is $1,250 from September 14–27.
+- Full tuition is $1,495 from September 28.
 - No prior AI, coding, or command-line experience is required.
 - The curriculum covers LLM, agent, and agentic-system fundamentals; tools; memory; evidence; permissions; and human approval.
-- Learners build a working personal assistant, a Personal Agent Map, a verification method, safety and recovery paths, and a next-30-days plan.
+- Learners build three working assistants, a source-grounded second-brain, a portable Agent Card, a Personal Agent Map, a verification method, safety and recovery paths, and a next-30-days plan.
+- No paid AI subscription is required for core exercises.
+- Instructor-led sessions may be recorded and transcribed with notice; breakout rooms are not recorded by default.
 - Learners who complete the program receive a named AgentX Certificate of Completion with a unique credential ID.
 - The certificate documents course completion. It is not academic credit or a professional certification.
 
@@ -52,7 +54,8 @@ Use this when a post focuses on financial, medical, legal, or other high-impact 
 
 ## Pre-publish check
 
-- [ ] Dates, time, location, price, and deadline match the live site and Stripe checkout.
+- [ ] Dates, time zone, online format, price, and deadline match the live site and Stripe checkout.
+- [ ] Recording, transcript, and private-link language matches the terms and privacy notice.
 - [ ] The enrollment link opens live Stripe checkout after the required confirmations.
 - [ ] The tagged URL matches the asset in `utm-matrix.csv`.
 - [ ] Any remaining-seat number comes from completed paid enrollments.

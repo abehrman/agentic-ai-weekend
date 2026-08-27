@@ -6,21 +6,21 @@ This folder contains ready-to-publish copy for the AgentX AI Course launch.
 
 - Program: Agentic AI Intensive from AgentX AI Course
 - Dates: October 5–27, 2026
-- Schedule: nine in-person sessions, 6:30–9:00 PM
-- Location: Tenafly, New Jersey
-- Cohort: maximum 20 participants
-- Launch tuition: $1,950 through September 13, 2026
-- Standard tuition: $2,250 from September 14–27
-- Full tuition: $2,500 from September 28
+- Schedule: nine live online sessions, 6:30–9:00 PM ET
+- Format: Zoom with four breakout studios of five
+- Cohort: high-touch, interactive; maximum 20 participants
+- Launch tuition: $995 through September 13, 2026
+- Standard tuition: $1,250 from September 14–27
+- Full tuition: $1,495 from September 28
 - Audience: ambitious beginners; no coding experience required
-- Outcome: a working personal assistant, Personal Agent Map, verification method, safety and recovery paths, and a next-30-days plan
+- Outcome: three working assistants, a source-grounded second-brain, portable Agent Card, Personal Agent Map, verification method, and next-30-days plan
 - Credential: a named AgentX Certificate of Completion with a unique credential ID
 
 ## Core positioning
 
 **Build your second-brain. Work with superhuman reach.**
 
-The course moves people beyond one-off chatbot questions. Learners study LLM, agent, and agentic-system fundamentals, then build a personal assistant they can direct, check, and control.
+The course moves people beyond one-off chatbot questions and beyond any one AI vendor. Learners compare leading and open models, study LLM, agent, and agentic-system fundamentals, then build portable assistants they can direct, check, and control. No paid AI subscription is required.
 
 ## Files
 
