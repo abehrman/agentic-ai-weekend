@@ -8,7 +8,7 @@ Most people still use AI one question at a time.
 
 Ask. Answer. Start over.
 
-I built the Agentic AI Intensive to teach AI beyond ChatGPT: choose the right model, then direct portable personal agents that can research, organize, plan, remember approved context, and move real work—with you in control.
+I built the Agentic AI Intensive to teach AI beyond ChatGPT: choose the right model, then direct a portable personal agent that can research, organize, plan, remember approved context, and move real work—with you in control.
 
 Over nine live sessions, we will cover the practical fundamentals:
 
