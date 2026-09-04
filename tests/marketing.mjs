@@ -134,7 +134,7 @@ must('privacy notice explains campaign attribution', privacy.includes('standard 
 must('no filler storage copy', !/typed work stays|clear local work|course checkmarks|files you downloaded/i.test(html));
 must('no stale September offer', !/September 18|16 live instructional hours|Agentic AI Weekend/i.test(brandedSurfaces.join('\n')));
 must('no stale physical-course copy ships', !/in[ -]?person|Tenafly|22\.5 live hours/i.test(brandedSurfaces.join('\n') + launchCopy));
-must('product is one assistant, not a council', !/three (?:working )?assistants|personal AI council|team of personal assistants/i.test(publicCopy + launchCopy));
+must('product is one assistant, not a council', !/three (?:working )?assistants|personal AI council|team of personal (?:assistants|agents)|portable personal agents/i.test(publicCopy + launchCopy));
 must('no fake social proof', !/testimonial|star rating|students enrolled|spots left/i.test(html));
 must('no separate paid AI account prerequisite', !new RegExp(['ChatGPT', 'Plus'].join(' '), 'i').test(publicCopy));
 must('no power-accessory requirement', !/charg(?:er|ing)/i.test(publicCopy));
