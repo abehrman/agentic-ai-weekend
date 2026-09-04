@@ -12,7 +12,7 @@ Use this before publishing, sending, or approving any marketing asset.
 - Full tuition is $1,495 from September 28.
 - No prior AI, coding, or command-line experience is required.
 - The curriculum covers LLM, agent, and agentic-system fundamentals; tools; memory; evidence; permissions; and human approval.
-- Learners build three working assistants, a source-grounded second-brain, a portable Agent Card, a Personal Agent Map, a verification method, safety and recovery paths, and a next-30-days plan.
+- Learners build one working assistant, a source-grounded second-brain, a portable Agent Card, a Personal Agent Map, a verification method, safety and recovery paths, and a next-30-days plan.
 - No paid AI subscription is required for core exercises.
 - Instructor-led sessions may be recorded and transcribed with notice; breakout rooms are not recorded by default.
 - Learners who complete the program receive a named AgentX Certificate of Completion with a unique credential ID.

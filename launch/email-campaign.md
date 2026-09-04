@@ -13,7 +13,7 @@ The gap I keep seeing is not access to AI. It is knowing how to make AI useful, 
 
 That is why I created the **Agentic AI Intensive** from AgentX AI Course.
 
-Across nine live online sessions, you will learn AI beyond ChatGPT: how leading and open models differ, how agents work, and how to carry a useful system across vendors. Then you will build three assistants and a source-grounded second-brain that can research, organize, plan, remember approved context, and move real work—with you in control.
+Across nine live online sessions, you will learn AI beyond ChatGPT: how leading and open models differ, how agents work, and how to carry a useful system across vendors. Then you will build one assistant and a source-grounded second-brain that can research, organize, plan, remember approved context, and move real work—with you in control.
 
 You might use that system to pressure-test a business idea, organize finances, compare a major purchase, plan travel, research doctors and medical choices, or finally bring order to documents and photos.
 
@@ -56,7 +56,7 @@ In the Agentic AI Intensive, you will build that system around a real part of yo
 
 The course does not replace professional judgment. It teaches you how to research better, verify claims, set boundaries, and remain the final decision-maker.
 
-Bring one real goal. Leave with three working assistants, a grounded research system, and a clearer way to use AI every day.
+Bring one real goal. Leave with one working assistant, a grounded research system, and a clearer way to use AI every day.
 
 [Explore what you will build](https://agentxaicourse.com/?utm_source=email&utm_medium=owned_email&utm_campaign=agentx_oct2026_launch&utm_content=use_cases)
 
@@ -80,7 +80,7 @@ In the October AgentX course, we build that model one layer at a time:
 2. An **agent** uses that LLM in a loop: plan, act, check, and adjust.
 3. An **agentic system** adds tools, memory, evidence, permissions, and human approval.
 
-Then we put the ideas to work. You will compare proprietary and open models, map your goal, build a portable Agent Card, create three assistants, ground research in chosen sources, verify results, and learn how to recover when something misses.
+Then we put the ideas to work. You will compare proprietary and open models, map your goal, build a portable Agent Card, create one assistant, ground research in chosen sources, verify results, and learn how to recover when something misses.
 
 No prior AI or coding experience is required. The live Zoom cohort is capped at 20, with four breakout studios of five, direct feedback, a private cohort channel, and recordings.
 
@@ -105,7 +105,7 @@ The curriculum does not change with the price window. It includes:
 - Nine live sessions from October 5–27
 - Guided setup and a preflight clinic
 - LLM, agent, and agentic-system fundamentals
-- Three working assistants and a source-grounded second-brain
+- One working assistant and a source-grounded second-brain
 - A portable Agent Card, Personal Agent Map, verification method, and recovery guidance
 - A personalized AgentX Certificate of Completion
 

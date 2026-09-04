@@ -52,7 +52,7 @@ adam.behrman@gmail.com
 
 ### Ready-to-paste newsletter blurb
 
-**Build your second-brain with AgentX AI Course.** The Agentic AI Intensive is a nine-session, beginner-friendly live online course from October 5–27. Learn AI beyond ChatGPT, compare leading and open models, then build three assistants and a source-grounded second-brain for research, planning, organization, and real-life decisions—with you in control. No coding or paid AI subscription required. High-touch cohort, maximum 20. Launch tuition is $995 through September 13. Learn more at [agentxaicourse.com](https://agentxaicourse.com/?utm_source=community_newsletter&utm_medium=partner_email&utm_campaign=agentx_oct2026_launch&utm_content=course_blurb).
+**Build your second-brain with AgentX AI Course.** The Agentic AI Intensive is a nine-session, beginner-friendly live online course from October 5–27. Learn AI beyond ChatGPT, compare leading and open models, then build one assistant and a source-grounded second-brain for research, planning, organization, and real-life decisions—with you in control. No coding or paid AI subscription required. High-touch cohort, maximum 20. Launch tuition is $995 through September 13. Learn more at [agentxaicourse.com](https://agentxaicourse.com/?utm_source=community_newsletter&utm_medium=partner_email&utm_campaign=agentx_oct2026_launch&utm_content=course_blurb).
 
 ---
 

@@ -17,7 +17,7 @@ Over nine live sessions, we will cover the practical fundamentals:
 - How tools, memory, evidence, permissions, and human approval create an agentic system
 - How to verify results and recover when something misses
 
-Then every learner will build three working assistants and one source-grounded second-brain around a real goal.
+Then every learner will build one working assistant and one source-grounded second-brain around a real goal.
 
 That goal might be launching a business, organizing finances, comparing a car purchase, planning travel, researching doctors and medical choices, finding discounts, or putting years of documents and photos in order.
 
@@ -94,7 +94,7 @@ https://agentxaicourse.com/?utm_source=linkedin&utm_medium=organic_social&utm_ca
 
 AgentX AI Course is bringing a live online, beginner-friendly Agentic AI Intensive to Zoom this October.
 
-In nine sessions, learn AI beyond ChatGPT, compare leading and open models, and build three assistants plus a source-grounded second-brain.
+In nine sessions, learn AI beyond ChatGPT, compare leading and open models, and build one assistant plus a source-grounded second-brain.
 
 Use it for a business idea, a budget, a car search, travel, doctor research, discounts, documents, photos, or the project you keep postponing.
 
@@ -134,7 +134,7 @@ Questions: adam.behrman@gmail.com
 
 I’m opening enrollment for the live online October cohort of AgentX AI Course.
 
-The Agentic AI Intensive is for people who want to learn AI beyond ChatGPT and build a portable team of personal assistants they can direct, check, and control.
+The Agentic AI Intensive is for people who want to learn AI beyond ChatGPT and build a portable personal assistant they can direct, check, and control.
 
 We will cover LLM, agent, and agentic fundamentals, then apply them to everyday work: entrepreneurship, planning, financial organization, major purchases, travel, important research, and organizing documents and photos.
 
@@ -148,4 +148,4 @@ See the full course: https://agentxaicourse.com/?utm_source=facebook&utm_medium=
 
 ## Forwardable referral text message
 
-Adam Behrman is running a live online Agentic AI course Oct 5–27. Beginners learn AI beyond ChatGPT and build three assistants plus a source-grounded second-brain for research, planning, organization, and real-life decisions. Nine evening Zoom sessions, max 20, no coding or paid AI subscription required, and a Certificate of Completion. Launch tuition is $995 through Sep 13: https://agentxaicourse.com/?utm_source=sms&utm_medium=referral&utm_campaign=agentx_oct2026_launch&utm_content=friend_forward
+Adam Behrman is running a live online Agentic AI course Oct 5–27. Beginners learn AI beyond ChatGPT and build one assistant plus a source-grounded second-brain for research, planning, organization, and real-life decisions. Nine evening Zoom sessions, max 20, no coding or paid AI subscription required, and a Certificate of Completion. Launch tuition is $995 through Sep 13: https://agentxaicourse.com/?utm_source=sms&utm_medium=referral&utm_campaign=agentx_oct2026_launch&utm_content=friend_forward
